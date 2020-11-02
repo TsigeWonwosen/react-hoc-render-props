@@ -27,19 +27,22 @@ function App() {
   const [posts, setPost] = React.useState([]);
   const [error, setError] = React.useState("");
 
-  React.useEffect(async () => {
-    try {
-      const response = await axios.get(
-        "http://jsonplaceholder.typicode.com/posts?_limit=10"
-      );
-      if (response) {
-        const postData = await response.data;
-        setPost([...postData]);
+  React.useEffect(() => {
+    async function fetchPost() {
+      try {
+        const response = await axios.get(
+          "http://jsonplaceholder.typicode.com/posts?_limit=10"
+        );
+        if (response) {
+          const postData = await response.data;
+          setPost([...postData]);
+        }
+      } catch (e) {
+        console.log(e);
+        setError("Error retrieving Data");
       }
-    } catch (e) {
-      console.log(e);
-      setError("Error retrieving Data");
     }
+    fetchPost();
   }, []);
   return (
     <div className='App'>
