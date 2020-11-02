@@ -20,6 +20,7 @@ html {
 .hero {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 90vh;
@@ -35,24 +36,63 @@ html {
   text-align: center;
   color: rgba(229, 241, 240, 0.965);
 }
-
-.hero div > button {
-  max-width: 90px;
+.head-btn {
+  position: relative;
+  height: 3rem;
+  width: 20%;
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  background: none;
+}
+.btn-apply {
+  position: relative;
+  max-width: 100px;
   padding: 6px 10px;
-  margin-right: 0.7rem;
-  margin-top: 2rem;
   border-radius: 5px;
-  border: 1px solid #5abe56;
+  border: 1px solid #0ba306;
   background: transparent;
-  color: rgba(126, 128, 18, 0.753);
+  outline: none;
+  color: #227a0c;
   font-size: 18px;
   font-weight: 800;
   cursor: pointer;
 }
-.hero div > button:last-child {
-  border: 1.5px solid #dce0e9;
-  background: #0e6b1aad;
-  color: rgb(236, 241, 241);
+.btnRegister {
+  position: relative;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 6px 10px;
+  max-width: 100px;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(
+    to right,
+    #82d36ee5,
+    #ff0000a9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #e2eeeef8;
+}
+
+.btn-apply:hover {
+  position: relative;
+  color: #dce0e9;
+  background: linear-gradient(
+    to right,
+    #82d36ee5,
+    #ff0000a9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safar*/
+}
+
+.btnRegister:hover {
+  position: relative;
+  color: #227a0c;
+  border: 1px solid #227a0c;
+  background: transparent;
 }
 .hero::before {
   content: "";
@@ -67,7 +107,7 @@ html {
   background-size: cover;
   object-fit: cover;
   background-repeat: "no-repeat";
-  opacity: 0.48;
+  opacity: 0.28;
 }
 .app-body {
   background-color: rgba(243, 240, 234, 0.65);
@@ -112,7 +152,7 @@ html {
   padding: 2px 5px;
   background-color: none;
   border-radius: 4px;
-  border: 1px solid #df6464;
+  border: 1px solid linear-gradient(to right, #c31432, #240b36);
   color: #df6464;
   cursor: pointer;
   outline: none;
@@ -120,7 +160,7 @@ html {
 }
 
 .dog-container > .dog-title-button > button:hover {
-  background-color: #df6464;
+  background-color: linear-gradient(to right, #c31432, #240b36);
   border: 1px solid #df6464;
   color: white;
 }

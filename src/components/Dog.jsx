@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 
 class Dog extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { count, handleCount, resetCount } = this.props;
     return (
