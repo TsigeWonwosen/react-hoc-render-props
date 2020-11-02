@@ -10,29 +10,10 @@ import Posts from "./components/Posts";
 import NavBar from "./components/NavBar";
 
 function App() {
-  // const [posts, setPost] = React.useState([]);
-  // const [error, setError] = React.useState("");
   const { posts, error, loading } = useRequest(
-    "http://jsonplaceholder.typicode.com/posts?_limit=10"
+    "http://jsonplaceholder.typicode.com/posts"
   );
 
-  // async function fetchPost() {
-  //   try {
-  //     const response = await axios.get(
-  //       "http://jsonplaceholder.typicode.com/posts?_limit=10"
-  //     );
-  //     if (response) {
-  //       const postData = await response.data;
-  //       setPost([...postData]);
-  //     }
-  //   } catch (e) {
-  //     setError("Error retrieving Data");
-  //   }
-  // }
-
-  // React.useEffect(() => {
-  //   fetchPost();
-  // }, []);
   return (
     <div className='App'>
       <UserProvider value={{ posts, error }}>
@@ -52,7 +33,8 @@ function App() {
                 )}
               />
             </div>
-            {loading || error ? error : <Posts />}
+            {error && <div>{error}...</div>}
+            {loading ? <h3>Loading ... </h3> : <Posts />}
           </div>
         </>
       </UserProvider>
