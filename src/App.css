@@ -264,9 +264,36 @@ img {
 /* page input form */
 .form {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem;
   margin-top: 1rem;
-  max-width: 300px;
+  max-width: 350px;
+  border-radius: 4px;
+}
+.form > label {
+  font-weight: 400;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1.2rem;
+  color: gray;
+}
+.form-input {
+  max-width: 150px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  margin-left: 0.8rem;
+  color: rgb(6, 29, 49);
+  background-color: #c8cacf;
+  padding: 4px 3px;
+}
+.form button {
+  max-width: 4rem;
+  background-color: none;
+  border-radius: 4px;
+  border: 1px solid #c31432;
+  color: #df6464;
+  cursor: pointer;
+  outline: none;
 }

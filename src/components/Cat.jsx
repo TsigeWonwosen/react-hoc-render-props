@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, memo } from "react";
 import withMouse from "./withMouse";
 class Cat extends Component {
   render() {
+    console.log("Cat Component");
+
     const { count, handleCount, resetCount } = this.props;
     return (
       <div className='dog-container'>
@@ -16,4 +18,4 @@ class Cat extends Component {
   }
 }
 
-export default withMouse(Cat, 10);
+export default memo(withMouse(Cat, 10));

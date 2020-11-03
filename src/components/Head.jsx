@@ -1,6 +1,8 @@
 import React from "react";
 
 function Head() {
+  console.log("Head Component");
+
   return (
     <div className='hero'>
       <h1>Render Props & HOC</h1>
@@ -12,4 +14,4 @@ function Head() {
   );
 }
 
-export default Head;
+export default React.memo(Head);

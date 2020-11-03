@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, memo } from "react";
 
 class Dog extends Component {
   render() {
+    console.log("Dog Component");
     const { count, handleCount, resetCount } = this.props;
     return (
       <div className='dog-container'>
@@ -17,4 +18,4 @@ class Dog extends Component {
   }
 }
 
-export default Dog;
+export default memo(Dog);

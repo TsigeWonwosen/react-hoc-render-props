@@ -11,18 +11,18 @@ function PageForm({ setPage }) {
     setPage(input);
   };
   return (
-    <form onSubmit={handleSubmit} classNameName='form'>
+    <form onSubmit={handleSubmit} className='form'>
       <label>
         Page:
         <input
-          classNameName='form-input'
+          className='form-input'
           type='text'
           name='input'
           value={input}
           onChange={handleChange}
         />
       </label>
-      <button type='submit'> Change Page</button>
+      <button type='submit'> Change</button>
     </form>
   );
 }

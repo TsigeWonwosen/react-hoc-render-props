@@ -1,6 +1,8 @@
 import React from "react";
 
-function NavBar() {
+const NavBar = () => {
+  console.log("NavBar Component");
+
   return (
     <div className='nav-bar'>
       <div className='log'>
@@ -13,6 +15,6 @@ function NavBar() {
       </ul>
     </div>
   );
-}
+};
 
-export default NavBar;
+export default React.memo(NavBar);
