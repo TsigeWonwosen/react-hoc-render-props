@@ -1,17 +1,19 @@
 import React from "react";
-import "./App.css";
 import Cat from "./components/Cat";
 import Dog from "./components/Dog";
 import Mouse from "./components/Mouse";
 import Head from "./components/Head";
+import PageForm from "./components/PageForm";
 import useRequest from "./components/useRequest";
-import { UserProvider } from "./context/userContext";
 import Posts from "./components/Posts";
 import NavBar from "./components/NavBar";
+import { UserProvider } from "./context/userContext";
+import "./App.css";
 
 function App() {
+  const [page, setPage] = React.useState(4);
   const { posts, error, loading } = useRequest(
-    "http://jsonplaceholder.typicode.com/posts"
+    `http://jsonplaceholder.typicode.com/posts?_page=${page}`
   );
 
   return (
@@ -33,6 +35,7 @@ function App() {
                 )}
               />
             </div>
+            <PageForm setPage={setPage} />
             {error && <div>{error}...</div>}
             {loading ? <h3>Loading ... </h3> : <Posts />}
           </div>
