@@ -260,3 +260,13 @@ img {
   transform: scale(1.1);
   border-bottom: 2.4px solid #3f34d89b;
 }
+
+/* page input form */
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  max-width: 300px;
+}
