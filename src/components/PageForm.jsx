@@ -11,11 +11,11 @@ function PageForm({ setPage }) {
     setPage(input);
   };
   return (
-    <form onSubmit={handleSubmit} classNameName='form-input'>
+    <form onSubmit={handleSubmit} classNameName='form'>
       <label>
         Page:
         <input
-          classNameName='form-page-number'
+          classNameName='form-input'
           type='text'
           name='input'
           value={input}
