@@ -12,7 +12,7 @@ import "./App.css";
 
 function App() {
   const [page, setPage] = React.useState(4);
-  const { posts, error, loading } = useRequest(
+  const { posts, loading, error } = useRequest(
     `http://jsonplaceholder.typicode.com/posts?_page=${page}`
   );
 

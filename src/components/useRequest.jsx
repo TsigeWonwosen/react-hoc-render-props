@@ -12,9 +12,13 @@ const useRequest = (initUrl) => {
       try {
         setLoading(true);
         const response = await axios(initUrl);
-        if (!ignore) setData(response.data);
+        if (!ignore) {
+          setData(response.data);
+          setError("");
+        }
       } catch (err) {
         setError("Error Fetching Data");
+        setData([]);
       } finally {
         setLoading(false);
       }

@@ -297,3 +297,18 @@ img {
   cursor: pointer;
   outline: none;
 }
+.flag {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  width: auto;
+  display: flex;
+  justify-content: end;
+}
+ul > li:last-child:hover {
+  border: none !important;
+}
+.flag img {
+  width: 30px;
+  height: 25px;
+}

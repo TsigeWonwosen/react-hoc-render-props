@@ -12,6 +12,9 @@ const NavBar = () => {
         <li>Home</li>
         <li>Post</li>
         <li>Log In</li>
+        <li className='flag'>
+          <img src='//s.svgbox.net/flags-ld.svg?ic=et' />
+        </li>
       </ul>
     </div>
   );
