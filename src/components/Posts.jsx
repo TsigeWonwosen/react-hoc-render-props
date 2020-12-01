@@ -7,6 +7,7 @@ function Posts() {
     <div className='post'>
       <UserConsumer>
         {({ posts, error }) => {
+          if (error) <h2> {error}</h2>;
           return (
             <ul>
               {posts.map((post) => (
