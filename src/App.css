@@ -303,7 +303,7 @@ img {
   right: 15px;
   width: auto;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 ul > li:last-child:hover {
   border: none !important;

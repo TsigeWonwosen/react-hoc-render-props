@@ -36,8 +36,8 @@ function App() {
               />
             </div>
             <PageForm setPage={setPage} />
-            {error && <div>{error}...</div>}
             {loading ? <h3>Loading ... </h3> : <Posts />}
+            {error && <div>{error}...</div>}
           </div>
         </>
       </UserProvider>

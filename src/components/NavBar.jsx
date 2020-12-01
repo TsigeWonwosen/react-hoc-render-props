@@ -13,7 +13,7 @@ const NavBar = () => {
         <li>Post</li>
         <li>Log In</li>
         <li className='flag'>
-          <img src='//s.svgbox.net/flags-ld.svg?ic=et' />
+          <img src='//s.svgbox.net/flags-ld.svg?ic=et' alt='flag' />
         </li>
       </ul>
     </div>
