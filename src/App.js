@@ -11,7 +11,7 @@ import { UserProvider } from "./context/userContext";
 import "./App.css";
 
 function App() {
-  const [page, setPage] = React.useState(4);
+  const [page, setPage] = React.useState(2);
   const { posts, loading, error } = useRequest(
     `http://jsonplaceholder.typicode.com/posts?_page=${page}`
   );
@@ -37,7 +37,7 @@ function App() {
             </div>
             <PageForm setPage={setPage} />
             {loading ? <h3>Loading ... </h3> : <Posts />}
-            {error && <div>{error}...</div>}
+            {error && <div>{error}</div>}
           </div>
         </>
       </UserProvider>
