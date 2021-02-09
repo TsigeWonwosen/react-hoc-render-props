@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const useRequest = (initUrl) => {
   const [posts, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   useEffect(() => {
     let ignore = false;
@@ -14,10 +14,10 @@ const useRequest = (initUrl) => {
         const response = await axios(initUrl);
         if (!ignore) {
           setData(response.data);
-          setError("");
+          setError('');
         }
       } catch (err) {
-        setError("Error Fetching Data");
+        setError('Error Fetching Data');
         setData([]);
       } finally {
         setLoading(false);
@@ -25,9 +25,9 @@ const useRequest = (initUrl) => {
     };
     fetchProduct();
 
-    return () => {
-      ignore = true;
-    };
+    // return () => {
+    //   ignore = true;
+    // };
   }, [initUrl]);
   return { posts, loading, error };
 };
