@@ -25,9 +25,9 @@ const useRequest = (initUrl = 'https://jsonplaceholder.typicode.com/posts') => {
     };
     fetchProduct();
 
-    // return () => {
-    //   ignore = true;
-    // };
+    return () => {
+      ignore = true;
+    };
   }, [initUrl]);
   return { posts, loading, error };
 };
