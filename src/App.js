@@ -1,12 +1,15 @@
 import React from 'react';
-import Cat from './components/Cat';
-import Dog from './components/Dog';
-import Mouse from './components/Mouse';
-import Head from './components/Head';
-import PageForm from './components/PageForm';
-import useRequest from './components/useRequest';
-import Posts from './components/Posts';
-import NavBar from './components/NavBar';
+
+import {
+  Cat,
+  Dog,
+  Mouse,
+  Head,
+  PageForm,
+  useRequest,
+  Posts,
+  NavBar,
+} from './components';
 import { UserProvider } from './context/userContext';
 import './App.css';
 
