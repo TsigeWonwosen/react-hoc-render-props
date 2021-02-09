@@ -1,22 +1,17 @@
-import React from "react";
-import { UserConsumer } from "../context/userContext";
-import ListUser from "./ListUser";
+import React, { useContext } from 'react';
+import { userContext } from '../context/userContext';
+import ListUser from './ListUser';
 
 function Posts() {
+  const { posts, error } = useContext(userContext);
+  if (error) return <h2> {error}</h2>;
   return (
-    <div className='post'>
-      <UserConsumer>
-        {({ posts, error }) => {
-          if (error) <h2> {error}</h2>;
-          return (
-            <ul>
-              {posts.map((post) => (
-                <ListUser key={post.id} {...post} />
-              ))}
-            </ul>
-          );
-        }}
-      </UserConsumer>
+    <div className="post">
+      <ul>
+        {posts.map((post) => (
+          <ListUser key={post.id} {...post} />
+        ))}
+      </ul>
     </div>
   );
 }
