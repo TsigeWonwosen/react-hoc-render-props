@@ -1,7 +1,7 @@
 export { default as NavBar } from './NavBar.jsx';
 export { default as Cat } from './Cat.jsx';
 export { default as ListUser } from './ListUser.jsx';
-export { default as Mouse } from './Mouse.jsx';
+export { default as Mouse } from './useMouse.jsx';
 export { default as Posts } from './Posts.jsx';
 export { default as useRequest } from './useRequest.jsx';
 export { default as withMouse } from './withMouse.jsx';

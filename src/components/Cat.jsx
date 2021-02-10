@@ -1,21 +1,23 @@
-import React, { Component, memo } from "react";
-import withMouse from "./withMouse";
-class Cat extends Component {
-  render() {
-    console.log("Cat Component");
+import React from 'react';
+import useMouse from './useMouse.jsx';
+const Cat = ({ name }) => {
+  const { count, handleCount, resetCount } = useMouse();
 
-    const { count, handleCount, resetCount } = this.props;
-    return (
-      <div className='dog-container'>
-        <img src='/images/cat.jpeg' alt='cat' onMouseEnter={handleCount} />
-
-        <div className='dog-title-button'>
-          <h4> Number of Cat Hovered : {count}</h4>
-          <button onClick={resetCount}>Reset</button>
-        </div>
+  return (
+    <div className="dog-container">
+      <div onMouseOver={handleCount}>
+        <img src="/images/cat.jpeg" alt="cat" />
       </div>
-    );
-  }
-}
 
-export default memo(withMouse(Cat, 10));
+      <div className="dog-title-button">
+        <h4>
+          {' '}
+          Number of Cat Hovered ({name}) : {count}
+        </h4>
+        <button onClick={resetCount}>Reset</button>
+      </div>
+    </div>
+  );
+};
+
+export default Cat;

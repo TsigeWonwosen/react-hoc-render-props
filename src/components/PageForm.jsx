@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 function PageForm({ setPage }) {
-  const [input, setInput] = React.useState("");
+  const [input, setInput] = React.useState('');
 
   const handleChange = (e) => {
     setInput(e.target.value);
@@ -9,20 +9,19 @@ function PageForm({ setPage }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setPage(input);
+    setInput('');
   };
   return (
-    <form onSubmit={handleSubmit} className='form'>
-      <label>
-        Page:
-        <input
-          className='form-input'
-          type='text'
-          name='input'
-          value={input}
-          onChange={handleChange}
-        />
-      </label>
-      <button type='submit'> Change</button>
+    <form onSubmit={handleSubmit} className="form">
+      <label>Page:</label>
+      <input
+        className="form-input"
+        type="text"
+        name="input"
+        value={input}
+        onChange={handleChange}
+      />
+      <button type="submit"> Change</button>
     </form>
   );
 }

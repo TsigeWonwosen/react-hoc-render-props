@@ -1,23 +1,20 @@
-import React from "react";
-import Mouse from "./Mouse";
+// import React from 'react';
 
-function withMouse(Component, incrNumber = 1) {
-  return class extends React.Component {
-    render() {
-      return (
-        <Mouse
-          incrNumber={incrNumber}
-          render={(count, handleCount, resetCount) => (
-            <Component
-              {...this.props}
-              count={count}
-              handleCount={handleCount}
-              resetCount={resetCount}
-            />
-          )}
-        />
-      );
-    }
-  };
-}
-export default withMouse;
+// // function withMouse(Component, incrNumber = 1) {
+// //   // return (props) => {
+// //   //   return (
+// //   //     // <Mouse
+// //   //     //   incrNumber={incrNumber}
+// //   //     //   render={(count, handleCount, resetCount) => (
+// //   //     //     <Component
+// //   //     //       {...props}
+// //   //     //       count={count}
+// //   //     //       handleCount={handleCount}
+// //   //     //       resetCount={resetCount}
+// //   //     //     />
+// //   //       )}
+// //   //     />
+// //     );
+// //   };
+// // }
+// export default withMouse;
