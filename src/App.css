@@ -111,17 +111,14 @@ body::-webkit-scrollbar-track {
   margin-top: -4rem;
   margin-bottom: 4rem;
   width: 100%;
-  /* max-width: 1200px; */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: wheat;
   align-items: center;
-  /* border-radius: 10px; */
   position: relative;
   z-index: 10;
-  /* padding: 4rem 2rem 2rem; */
-  /* box-shadow: -0.3rem 10px 5rem 0.5rem rgba(19, 19, 19, 0.49); */
 }
 
 .app-container {
@@ -131,7 +128,6 @@ body::-webkit-scrollbar-track {
   align-items: center;
   width: 100%;
   border-radius: 5px;
-  /* padding: 1rem; */
   background-color: transparent;
 }
 
@@ -179,12 +175,6 @@ img {
   box-shadow: inset 0 0 10px #000000;
 }
 
-.post {
-  margin-top: 1rem;
-  padding: 2rem;
-  text-align: left;
-}
-
 .post ul {
   padding: 1rem;
   list-style: none;
@@ -217,7 +207,6 @@ img {
   }
   .post ul {
     padding: 1rem 0rem;
-    
   }
 
   .post ul li:not(:last-child) {

@@ -61,25 +61,13 @@ const NavBar = () => {
           </Link>
         </List>
         <List>
-          <Link to="posts" smooth={true} duration={2000} spy={true} delay={100}>
-            Post
-          </Link>
-        </List>
-        <List>
           <Link to="about" smooth={true} duration={2000} spy={true} delay={100}>
             About
           </Link>
         </List>
         <List>
-          <Link
-            to="project"
-            smooth={true}
-            duration={2000}
-            spy={true}
-            delay={100}
-          >
-            {' '}
-            Projects
+          <Link to="posts" smooth={true} duration={2000} spy={true} delay={100}>
+            Blogs
           </Link>
         </List>
         <List>Contact</List>

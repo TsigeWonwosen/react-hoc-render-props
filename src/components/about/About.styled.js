@@ -55,11 +55,12 @@ export const Image = styled(Profile)`
   object-fit: cover;
   position: center center;
 `;
-export const Title = styled.h1`
-  font-size: clamp(1rem, -0.875rem + 8vw, 2rem);
+export const Title = styled.h2`
+  font-size: clamp(2rem, -0.875rem + 8vw, 3rem);
   margin-bottom: 1rem;
   font-weight: 700;
   letter-spacing: 2px;
+  text-transform: capitalize;
   color: rgba(255, 255, 255, 0.8);
 `;
 export const Paragraph = styled.p`
