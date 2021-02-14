@@ -1,10 +1,12 @@
 import React, { memo } from 'react';
-import useMouse from './useMouse.jsx';
+import useMouse from '../../components/useMouse.jsx';
 
-import DogImage from '../img/backgraund2.jpg';
+import DogImage from '../../img/backgraund2.jpg';
 
 const Dog = () => {
   const { count, handleCount, resetCount } = useMouse();
+
+  //TODO
 
   return (
     <div className="dog-container">
