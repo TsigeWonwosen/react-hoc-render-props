@@ -9,8 +9,6 @@ function Posts() {
   if (error) return <h2> {error}</h2>;
   return (
     <ContainerPosts id="posts">
-     
-
       <CardContainer>
         <WrapperPosts>
           {posts.map((post) => (
@@ -23,8 +21,10 @@ function Posts() {
 }
 
 export default Posts;
+
 export const ContainerPosts = styled.section`
   margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 2rem;
   text-align: left;
 `;
@@ -62,5 +62,3 @@ export const CardContainer = styled.div`
   color: white;
   font-family: 'DM Mono', monospace;
 `;
-
-

@@ -18,7 +18,6 @@ const NavBar = () => {
 
   useEffect(() => {
     async function handleScrollBar() {
-      console.log(navBc);
       try {
         if (window.scrollY >= 130) {
           setNavBc(true);
@@ -61,12 +60,26 @@ const NavBar = () => {
           </Link>
         </List>
         <List>
-          <Link to="about" smooth={true} duration={2000} spy={true} delay={100}>
+          <Link
+            to="about"
+            smooth={true}
+            duration={2000}
+            spy={true}
+            delay={100}
+            offset={-100}
+          >
             About
           </Link>
         </List>
         <List>
-          <Link to="posts" smooth={true} duration={2000} spy={true} delay={100}>
+          <Link
+            to="posts"
+            smooth={true}
+            duration={2000}
+            spy={true}
+            delay={100}
+            offset={-400}
+          >
             Blogs
           </Link>
         </List>

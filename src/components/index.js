@@ -12,5 +12,5 @@ export { default as Service } from './service/Service.jsx';
 
 export { default as Head } from './hero/Head.jsx';
 export { default as PageForm } from './home/PageForm.jsx';
-export { default as Card } from './Card.jsx';
+export { default as Card } from './otherProjects/Card.jsx';
 export { default as Footer } from './footer/Footer.js';

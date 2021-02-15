@@ -39,11 +39,11 @@ export const Title = styled.h1`
 `;
 
 export const Line = styled.span`
-  margin-top: 0.8rem;
+  margin-top: 2rem;
   padding: 0;
   height: 0.2rem;
   background-color: rgba(165, 167, 182, 0.76);
-  width: 30%;
+  width: 20%;
 `;
 
 export const Body = styled.div`
