@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 import DownArrowIcons from '../../img/down-arrow.gif';
 
@@ -22,10 +23,22 @@ function Head() {
           adipisci?
         </Text>
         <ButtonContainer>
-          <Button primary="primer"> Apply</Button>
-          <Button> Register</Button>
+          <Button primary="primer"> Contact Me</Button>
+
+          <Button>
+            <Link
+              to="project"
+              smooth={true}
+              duration={2000}
+              spy={true}
+              delay={100}
+              offset={100}
+            >
+              See Projects
+            </Link>
+          </Button>
         </ButtonContainer>
-        <DownArrow src={DownArrowIcons}/>
+        <DownArrow src={DownArrowIcons} />
       </Overlay>
     </HeroContainer>
   );

@@ -1,15 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import moment from 'moment';
 import styled from 'styled-components';
 
-function ListUser({ title, body, userId, id }) {
+function ListUser({ title, body, _id, email, image: { url }, createdAt }) {
+  let date = new window.Date(createdAt);
+  date = moment(date).format('MMM-Do-YYYY');
+  let TextBody = body.length > 100 ? body.substr(0, 120) + ' ...' : body;
   return (
     <Card>
-      <Header>{userId}</Header>
-      <Title>{title}</Title>
-      <PostBody>{body}</PostBody>
+      <BodyContainer>
+        <Image src={url} alt={title} />
+        <Body>
+          <ArticleInfo>
+            <Header>{email}</Header>
+            <Date> Published on {date}</Date>
+          </ArticleInfo>
+          <Title>{title}</Title>
+          <PostBody>{TextBody}</PostBody>
+        </Body>
+      </BodyContainer>
       <Tags>
-        <Link href="!#">Comments</Link>
-        <Link href="!#">Likes</Link>
+        <LinkTo to={`/blogs/${_id}`}>Read More</LinkTo>
+        <LinkTo href="!#">Likes</LinkTo>
       </Tags>
     </Card>
   );
@@ -22,18 +35,19 @@ export const Card = styled.article`
   display: flex;
   position: relative;
   flex-direction: column;
-  height: 300px;
+  height: 400px;
   width: 490px;
   min-width: 300px;
-  padding: 1rem;
   border-radius: 16px;
   transform-style: preserve-3d;
   perspective: 500px;
   backdrop-filter: blur(10px);
-  background: linear-gradient(rgba(126, 116, 123, 0.3), rgba(94, 37, 99, 0.2));
+  background: linear-gradient(150deg, #39ef74, #4600f1 100%);
   box-shadow: -0.1rem 0 1rem #000;
   transition: 0.4s all ease-in-out;
   z-index: 20;
+  padding: 0;
+  padding-bottom: 1rem;
   overflow: hidden;
 
   @media (max-width: 900px) {
@@ -41,7 +55,7 @@ export const Card = styled.article`
     padding: 1rem 0;
     margin: 0;
   }
-  
+
   &:hover {
     transform: translateY(-5px);
     transform: rotateY(2deg);
@@ -72,34 +86,66 @@ export const Card = styled.article`
     z-index: -1;
   }
 `;
+export const Image = styled.img`
+  width: 100%;
+  height: 45%;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  position: center;
+  margin: 0;
+`;
 
+export const ArticleInfo = styled.span`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+`;
+
+export const Date = styled.h6`
+  font-size: 0.8rem;
+  color: rgba(197, 204, 204, 0.685);
+`;
 export const Header = styled.h2`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 0.8rem;
+  color: rgba(197, 204, 204, 0.521);
+`;
+export const BodyContainer = styled.section`
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  position: absolute;
-  width: 10%;
-  height: 50px;
-  top: 5px;
-  right: 10px;
-  font-size: 3rem;
-  color: rgba(197, 204, 204, 0.171);
+  gap: 10px;
+`;
+
+export const Body = styled.div`
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: auto;
 `;
 
 export const Title = styled.h4`
+  padding: 0;
+  margin: 0;
   font-size: 1.3rem;
-  margin: auto 1rem;
   color: rgba(255, 255, 255, 0.856);
 `;
 export const PostBody = styled.h6`
   font-size: 1.1rem;
-  margin: auto 1rem;
-  padding: 0rem 1rem;
   color: rgba(255, 255, 255, 0.521);
 `;
 
 export const Tags = styled.div`
   width: 100%;
+  height: 10%;
+  margin: 0.7rem 0;
   display: flex;
   justify-content: space-around;
   line-height: 2;
@@ -115,7 +161,7 @@ export const Tags = styled.div`
     border-color: rgb(75, 228, 233);
   }
 `;
-export const Link = styled.a`
+export const LinkTo = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,3 +182,4 @@ export const Link = styled.a`
     transform: translateY(-2px);
   }
 `;
+

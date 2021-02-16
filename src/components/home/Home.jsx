@@ -1,41 +1,48 @@
-import React, { useState } from 'react';
-import { UserProvider } from '../../context/userContext';
+import React, { useContext } from 'react';
+
 import styled from 'styled-components';
-
-import { PageForm, useRequest, Posts } from '../../components';
+import { userContext } from '../../context/userContext';
+import { PageForm,  Posts } from '../../components';
 function Home() {
-  const [page, setPage] = useState(1);
-  const { posts, loading, error } = useRequest(
-    `https://jsonplaceholder.typicode.com/posts?_page=${page}`,
-  );
-
+  // const [page, setPage] = useState(1);
+  const { posts, error, loading } = useContext(userContext);
   return (
     <div className="app-body">
-      <Title>Blogs</Title>
-      <Line />
-      <UserProvider value={{ posts, error, loading }}>
-        <PageForm setPage={setPage} posts={posts} />
+      <ContainerPosts id="posts">
+        <Title>Blogs</Title>
+        <Line />
+
+        <PageForm posts={posts} />
         {loading ? <h3>Loading ... </h3> : <Posts />}
         {error && <div>{error}</div>}
-      </UserProvider>
+      </ContainerPosts>
     </div>
   );
 }
 
 export default Home;
 
+export const ContainerPosts = styled.section`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0rem 3rem;
+  text-align: left;
+  background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+`;
+
 export const Title = styled.h2`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: auto;
   color: #fdfdfd;
   letter-spacing: 2px;
   text-transform: capitalize;
   font-size: 3rem;
   padding: 1rem 0;
   margin-bottom: 0.1rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
   z-index: 20;
 
   @media (max-width: 900px) {
@@ -44,10 +51,11 @@ export const Title = styled.h2`
 `;
 
 export const Line = styled.div`
-  margin-top: 0.8rem;
-  margin-bottom: 2rem;
+  margin: 2rem auto 2rem;
   padding: 0;
-  height: 0.2rem;
+  height: 0.4rem;
   background-color: rgba(165, 167, 182, 0.96);
-  width: 13%;
+  width: 150px;
+  text-align: center;
+  border-radius: 15px;
 `;

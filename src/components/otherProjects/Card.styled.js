@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const CardContainer = styled.div`
   margin: 0;
-  padding: 3rem 1rem 1rem ;
+  padding: 3rem 1rem 1rem;
   box-sizing: border-box;
   color: white;
   font-family: 'DM Mono', monospace;
@@ -21,10 +21,11 @@ export const Title = styled.h2`
 export const Line = styled.div`
   margin: 2rem auto 2rem;
   padding: 0;
-  height: 0.2rem;
+  height: 0.4rem;
   background-color: rgba(165, 167, 182, 0.96);
   width: 150px;
   text-align: center;
+  border-radius:15px;
 `;
 
 export const CardList = styled.section`
@@ -34,7 +35,7 @@ export const CardList = styled.section`
   overflow-x: scroll;
 `;
 
-export const Card = styled.div`
+export const Card = styled.span`
   display: flex;
   position: relative;
   flex-direction: column;
@@ -62,6 +63,7 @@ export const Card = styled.div`
 export const CardHeader = styled.header`
   margin-bottom: auto;
   background-color: transparent;
+  text-transform: capitalize;
 `;
 
 export const Date = styled.span`
@@ -74,6 +76,7 @@ export const HeaderTitle = styled.h2`
   font-size: 20px;
   margin: 0.25rem 0 auto;
   cursor: pointer;
+  text-transform: capitalize;
 `;
 
 export const Author = styled.div`
@@ -112,7 +115,7 @@ export const Prefix = styled.div`
   margin: 0.25rem 0 auto;
   cursor: pointer;
   font-size: 1rem;
-  color: #7a7a8c;
+  color: '#7a7a8c';
 `;
 
 export const Name = styled.span`
@@ -131,7 +134,7 @@ export const Tags = styled.div`
   line-height: 2;
   margin-bottom: 0;
   background-color: transparent;
-  border: 1px solid rgb(22, 32, 77);
+  border: 1px solid rgba(22, 32, 77, 0.4);
   border-radius: 10px;
 `;
 

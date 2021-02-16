@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   position: relative;
   height: 100vh;
   width: 100%;
-  margin: 2rem 0rem 4rem;
+  margin: 2rem 0rem 0rem;
   @media (max-width: 900px) {
     margin: 1rem 0rem 2rem;
   }
@@ -21,7 +21,7 @@ export const Content = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem;
+  padding: 2rem;
   position: relative;
   z-index: 10;
 
@@ -41,6 +41,9 @@ export const Content = styled.section`
   }
 `;
 
+export const Header = styled.span`
+  z-index: 20;
+`;
 export const Title = styled.h2`
   display: flex;
   flex-direction: row;
@@ -51,8 +54,6 @@ export const Title = styled.h2`
   text-transform: capitalize;
   font-size: 3.2rem;
   padding: 1rem 0;
-  margin-bottom: 2rem;
-  border-bottom: 3px solid #e0e1e6;
   z-index: 20;
 
   @media (max-width: 900px) {
@@ -73,4 +74,15 @@ export const Paragraph = styled.p`
     font-size: 1.1rem;
     line-height: 1.6rem;
   }
+`;
+
+export const Line = styled.div`
+  z-index: 20;
+  margin: 0.3rem auto 2.4rem;
+  padding: 0;
+  height: 0.4rem;
+  background-color: #fdfdfd;
+  width: 150px;
+  text-align: center;
+  border-radius: 15px;
 `;

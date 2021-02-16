@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
-import { Link, animateScroll as scroll } from 'react-scroll';
-
+import { Link as NewLink, animateScroll as scroll } from 'react-scroll';
 import {
   Container,
   ListContainer,
@@ -11,6 +9,7 @@ import {
   LogoName,
   Image,
   moveVertically,
+  LinkStyled,
 } from './NavBar.styled';
 
 const NavBar = () => {
@@ -55,12 +54,10 @@ const NavBar = () => {
       </Logo>
       <ListContainer>
         <List>
-          <Link to="hero" smooth={true} duration={2000} spy={true}>
-            Home
-          </Link>
+          <LinkStyled to="/">Home</LinkStyled>
         </List>
         <List>
-          <Link
+          <NewLink
             to="about"
             smooth={true}
             duration={2000}
@@ -69,10 +66,10 @@ const NavBar = () => {
             offset={-100}
           >
             About
-          </Link>
+          </NewLink>
         </List>
         <List>
-          <Link
+          <NewLink
             to="posts"
             smooth={true}
             duration={2000}
@@ -81,10 +78,22 @@ const NavBar = () => {
             offset={-400}
           >
             Blogs
-          </Link>
+          </NewLink>
         </List>
-        <List>Contact</List>
-        <List>Login</List>
+        <List>
+          <NewLink
+            to="project"
+            smooth={true}
+            duration={2000}
+            spy={true}
+            delay={100}
+            offset={-400}
+          >
+            Projects
+          </NewLink>
+        </List>
+        <List to="/contact">Contact</List>
+        <List to="/login">Login</List>
       </ListContainer>
       <Flag>
         <Image src="//s.svgbox.net/flags-ld.svg?ic=et" alt="flag" />

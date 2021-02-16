@@ -8,26 +8,17 @@ function Posts() {
   const { posts, error } = useContext(userContext);
   if (error) return <h2> {error}</h2>;
   return (
-    <ContainerPosts id="posts">
-      <CardContainer>
-        <WrapperPosts>
-          {posts.map((post) => (
-            <ListUser key={post.id} {...post} />
-          ))}
-        </WrapperPosts>
-      </CardContainer>
-    </ContainerPosts>
+    <CardContainer>
+      <WrapperPosts>
+        {posts.map((post) => (
+          <ListUser key={post._id} {...post} />
+        ))}
+      </WrapperPosts>
+    </CardContainer>
   );
 }
 
 export default Posts;
-
-export const ContainerPosts = styled.section`
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 2rem;
-  text-align: left;
-`;
 
 export const WrapperPosts = styled.section`
   display: grid;

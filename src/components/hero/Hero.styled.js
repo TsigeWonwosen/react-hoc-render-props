@@ -17,7 +17,7 @@ export const HeroContainer = styled.section`
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
     background-image: url(${HeroImage});
     background-position: top center;
     background-size: cover;
@@ -71,21 +71,24 @@ export const Text = styled.p`
 
 export const ButtonContainer = styled.section`
   position: relative;
-  height: 3rem;
+  height: 2rem;
   margin-top: 2rem;
-  max-width: 300px;
+  max-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   background: none;
+  @media (max-width: 900px) {
+    max-width: 300px;
+  }
 `;
 
 export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* max-width: 100px; */
+  width: 1560px;
   padding: 10px 1.7rem;
   margin: 1rem;
   border-radius: 5px;
@@ -95,7 +98,7 @@ export const Button = styled.button`
   cursor: pointer;
   position: relative;
   border: none;
-  background: linear-gradient(90deg, #ddd235, #1a3b3d, #4fd88d);
+  background: linear-gradient(45deg, #39ef74, #4600f1);
   color: #e2eeeef8;
   &:hover {
     color: #dce0e9;
@@ -112,7 +115,7 @@ export const Button = styled.button`
 
       &:hover {
         color: #dce0e9;
-        background: linear-gradient(90deg, #ddd235, #1a3b3d, #4fd88d);
+        background: linear-gradient(150deg, #39ef74, #4600f1 100%);
       }
     `}
 

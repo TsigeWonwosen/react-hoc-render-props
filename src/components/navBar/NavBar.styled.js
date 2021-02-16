@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
-
+import { Link } from 'react-router-dom';
 export const Container = styled.section`
   height: 80px;
   width: 100%;
@@ -145,4 +145,9 @@ export const moveVertically = keyframes`
       #d62ee5 100%
     );
   }
+`;
+
+export const LinkStyled = styled(Link)`
+  text-decoration: none;
+  color: inherit;
 `;

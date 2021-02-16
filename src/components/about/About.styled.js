@@ -56,7 +56,6 @@ export const Image = styled(Profile)`
 `;
 export const Title = styled.h2`
   font-size: clamp(2rem, -0.875rem + 8vw, 3rem);
-  margin-bottom: 1rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: capitalize;
@@ -72,10 +71,11 @@ export const Paragraph = styled.p`
 `;
 
 export const Line = styled.div`
-  margin-top: 0.8rem;
-  margin-bottom: 2rem;
+  margin: 2rem auto 2rem;
   padding: 0;
-  height: 0.2rem;
+  height: 0.4rem;
   background-color: rgba(165, 167, 182, 0.96);
-  width: 25%;
+  width: 150px;
+  text-align: center;
+  border-radius: 15px;
 `;

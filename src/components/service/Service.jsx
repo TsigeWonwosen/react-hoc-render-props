@@ -1,11 +1,21 @@
 import React from 'react';
 
-import { Wrapper, Title, Paragraph, Content } from './Service.styled';
+import {
+  Wrapper,
+  Title,
+  Paragraph,
+  Content,
+  Header,
+  Line,
+} from './Service.styled';
 function Service() {
   return (
     <Wrapper>
       <Content>
-        <Title>Service</Title>
+        <Header>
+          <Title>Service</Title>
+          <Line />
+        </Header>
         <Paragraph>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis,
           doloribus sapiente. Explicabo, fugit expedita perspiciatis sint

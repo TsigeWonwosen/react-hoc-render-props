@@ -39,7 +39,7 @@ export const project_Db = [
     author: 'Wonde Shi.',
     info: 'Fullstack Developer',
     tags: ['React', 'Redux', 'Strapi', 'Heroku'],
-    },
+  },
   {
     date: 'Jen 10th 2021',
     title: 'React Hooks and new feature',
@@ -47,6 +47,15 @@ export const project_Db = [
 
     author: 'Wonde Shi.',
     info: 'Fullstack Developer',
+    tags: ['React', 'Hooks', 'UseReducer'],
+  },
+  {
+    date: 'Feb 15th 2021',
+    title: 'Heroku with Strapi and Cloudinary',
+    img: photo2,
+
+    author: 'Wondwosen S.',
+    info: 'JaMstack Developer',
     tags: ['React', 'Hooks', 'UseReducer'],
   },
 ];
