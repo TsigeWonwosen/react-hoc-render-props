@@ -4,7 +4,7 @@ import HeroImage from '../../img/backgraund2.jpg';
 export const HeroContainer = styled.section`
   position: relative;
   height: 100vh;
-  z-index: 4;
+  z-index: 10;
   margin-top: 0;
   padding-top: 0;
   clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 89%, 0% 80%);
@@ -98,11 +98,11 @@ export const Button = styled.button`
   cursor: pointer;
   position: relative;
   border: none;
-  background: linear-gradient(45deg, #39ef74, #4600f1);
+  background: #fca311;
   color: #e2eeeef8;
   &:hover {
-    color: #dce0e9;
-    border: 1px solid #227a0c;
+    color: #fca311;
+    border: 1px solid white;
     background: transparent;
   }
 
@@ -110,12 +110,12 @@ export const Button = styled.button`
     props.primary &&
     css`
       background: transparent;
-      border: 1px solid #0ba306;
-      color: #227a0c;
+      border: 1px solid #fca311;
+      color: white;
 
       &:hover {
-        color: #dce0e9;
-        background: linear-gradient(150deg, #39ef74, #4600f1 100%);
+        color: white;
+        background: #fca311;
       }
     `}
 

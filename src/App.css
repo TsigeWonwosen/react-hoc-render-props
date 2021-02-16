@@ -5,11 +5,13 @@
 *,
 html {
   margin: 0;
+  padding: 0;
   width: 100%;
   box-sizing: border-box;
 }
 body {
-  background-image: radial-gradient(circle, #00d4ff 0%, #0e2e86f3 100%);
+  background-color: #031d44;
+  background-image: linear-gradient(90deg, #121f56 0%, #0496ff 100%);
 }
 
 h1 {
@@ -18,7 +20,7 @@ h1 {
   font-size: 3.5rem;
   font-weight: 900;
   text-align: center;
-  color: rgba(229, 241, 240, 0.965);
+  color: #eaf4d3;
 }
 h1,
 h2,
@@ -80,7 +82,7 @@ p::after {
   margin-top: 110%;
 }
 .App {
-  text-align: center;
+  /* text-align: center;
   min-height: 100vh;
   width: 100%;
   margin: 0 auto;
@@ -88,7 +90,7 @@ p::after {
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
-  overflow-x: hidden;
+  overflow-x: hidden; */
 }
 body::-webkit-scrollbar {
   width: 14px;
@@ -106,23 +108,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 body::-webkit-scrollbar-track {
   background: linear-gradient(90deg, #462f7c, #251a3d 1px, #2a1653 0, #271a41);
-}
-
-.app-body {
-  background: linear-gradient(
-    120deg,
-    rgb(105, 107, 250),
-    rgba(43, 90, 134, 0.849),
-    rgba(55, 105, 27, 0.418)
-  );
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: wheat;
-  align-items: center;
-  position: relative;
-  z-index: 10;
 }
 
 .app-container {

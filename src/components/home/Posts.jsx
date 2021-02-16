@@ -32,6 +32,8 @@ export const WrapperPosts = styled.section`
   background-color: transparent;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 1.5rem;
+  padding: 3rem 0;
+
   overflow-x: hidden;
 
   @media (max-width: 900px) {

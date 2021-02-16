@@ -22,7 +22,7 @@ function ListUser({ title, body, _id, email, image: { url }, createdAt }) {
       </BodyContainer>
       <Tags>
         <LinkTo to={`/blogs/${_id}`}>Read More</LinkTo>
-        <LinkTo href="!#">Likes</LinkTo>
+        <LinkTo to="#">Likes</LinkTo>
       </Tags>
     </Card>
   );
@@ -182,4 +182,3 @@ export const LinkTo = styled(Link)`
     transform: translateY(-2px);
   }
 `;
-

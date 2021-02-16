@@ -26,7 +26,7 @@ function Projects() {
       <Line />
       <CardList className="card-list">
         {project_Db.map((project) => (
-          <Card>
+          <Card key={project.id}>
             <CardHeader>
               <Date>{project.date}</Date>
               <HeaderTitle>{project.title}</HeaderTitle>
@@ -48,7 +48,9 @@ function Projects() {
 
             <Tags>
               {project.tags.map((tag) => (
-                <Link href="!#">{tag}</Link>
+                <Link to="#" key={tag}>
+                  {tag}
+                </Link>
               ))}
             </Tags>
           </Card>

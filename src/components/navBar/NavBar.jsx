@@ -75,7 +75,7 @@ const NavBar = () => {
             duration={2000}
             spy={true}
             delay={100}
-            offset={-400}
+            offset={-450}
           >
             Blogs
           </NewLink>
@@ -87,13 +87,17 @@ const NavBar = () => {
             duration={2000}
             spy={true}
             delay={100}
-            offset={-400}
+            offset={-40}
           >
             Projects
           </NewLink>
         </List>
-        <List to="/contact">Contact</List>
-        <List to="/login">Login</List>
+        <List contact={true}>
+          <LinkStyled to="/contact">Contact</LinkStyled>
+        </List>
+        <List>
+          <LinkStyled to="/login">Login</LinkStyled>
+        </List>
       </ListContainer>
       <Flag>
         <Image src="//s.svgbox.net/flags-ld.svg?ic=et" alt="flag" />

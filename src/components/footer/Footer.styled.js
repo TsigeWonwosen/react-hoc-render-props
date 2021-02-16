@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const FooterWrapper = styled.div`
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   min-height: 300px;
-  margin-top: 2rem;
   padding: 2rem 2rem 2rem;
-  background-color: #111111;
+  background-color: #393a10;
   gap: 0.4rem;
   justify-items: center;
 `;
@@ -34,7 +34,7 @@ export const Title = styled.h1`
   font-size: 2.4rem;
   line-height: 3rem;
   letter-spacing: 1px;
-  color: rgba(204, 210, 216, 0.801);
+  color: #eaf4d3;
   text-align: left;
 `;
 
@@ -67,7 +67,7 @@ export const Card = styled.section`
 
 export const BodyTitle = styled.h2`
   font-size: 1rem;
-  color: rgba(230, 110, 41, 0.808);
+  color: #f4743b;
   letter-spacing: 3px;
   text-transform: uppercase;
   text-align: left;
@@ -105,5 +105,5 @@ export const List = styled.li`
 `;
 
 export const Span = styled.span`
-  color: rgba(182, 99, 43, 0.644);
+  color: #f4743b;
 `;

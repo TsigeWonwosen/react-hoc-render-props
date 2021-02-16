@@ -58,6 +58,7 @@ export const Title = styled.h2`
   font-size: clamp(2rem, -0.875rem + 8vw, 3rem);
   font-weight: 700;
   letter-spacing: 2px;
+  text-align: center;
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.8);
 `;

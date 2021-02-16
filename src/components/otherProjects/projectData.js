@@ -6,6 +6,7 @@ import photo5 from '../../img/imattsmart.jpg';
 
 export const project_Db = [
   {
+    id: 1,
     date: 'Sep 11th 2020',
     title: 'React with Redux',
     img: photo1,
@@ -14,6 +15,7 @@ export const project_Db = [
     tags: ['React', 'Redux', 'Strapi'],
   },
   {
+    id: 2,
     date: 'jun 4th 2019',
     title: 'React with Material ui',
     img: photo2,
@@ -23,6 +25,7 @@ export const project_Db = [
     tags: ['Html', 'Css', 'Material ui'],
   },
   {
+    id: 3,
     date: 'Oct 1th 2020',
     title: 'React with Redux',
     img: photo3,
@@ -32,6 +35,7 @@ export const project_Db = [
     tags: ['Node', 'Express', 'Passport'],
   },
   {
+    id: 4,
     date: 'Feb 14th 2021',
     title: 'Strapi as Backend Server',
     img: photo4,
@@ -41,6 +45,7 @@ export const project_Db = [
     tags: ['React', 'Redux', 'Strapi', 'Heroku'],
   },
   {
+    id: 5,
     date: 'Jen 10th 2021',
     title: 'React Hooks and new feature',
     img: photo5,
@@ -50,6 +55,7 @@ export const project_Db = [
     tags: ['React', 'Hooks', 'UseReducer'],
   },
   {
+     id:6,
     date: 'Feb 15th 2021',
     title: 'Heroku with Strapi and Cloudinary',
     img: photo2,

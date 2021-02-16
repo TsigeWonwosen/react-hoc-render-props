@@ -6,7 +6,7 @@ function PageForm({ setPage, posts }) {
     let singlePag;
     if (posts.length > 0) {
       singlePag = posts.map((post, index) => (
-        <SinglePaginationItem onClick={() => setPage(index)}>
+        <SinglePaginationItem onClick={() => setPage(index)} key={index}>
           {index + 1}
         </SinglePaginationItem>
       ));

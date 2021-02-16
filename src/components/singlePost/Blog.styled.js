@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const Wrapper = styled.div`
   min-height: 90vh;
   width: 100vw;
-  margin: 1rem auto;
+  margin: 5rem auto 5rem;
 `;
 
 export const Content = styled.section`
@@ -12,7 +12,7 @@ export const Content = styled.section`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #ffffff;
+  background-color: #eaf4d3;
   width: 70%;
   color: blue;
   margin: 7rem auto 2rem;
@@ -49,13 +49,13 @@ export const Button = styled(Link)`
   font-size: 1rem;
   text-decoration: none;
   width: auto;
-  border: 1px solid #a3581f;
-  color: #a3581f;
+  border: 1px solid #fca311;
+  color: #fca311;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 
   &:hover {
-    background: #a3581f;
+    background: #fca311;
     color: white;
   }
 `;
@@ -79,7 +79,7 @@ export const Title = styled.h2`
 export const Body = styled.h6`
   font-size: 1rem;
   padding: 1rem 3rem;
-  color: rgba(0, 0, 0, 0.48);
+  color: #848c8e;
   line-height: 1.8rem;
   text-align: left;
   margin: 1rem 0 3rem;

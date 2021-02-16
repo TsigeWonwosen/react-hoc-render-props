@@ -20,7 +20,8 @@ export const Container = styled.section`
     css`
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
       border-bottom: 1px solid rgba(163, 159, 159, 0.3);
-      background: linear-gradient(90deg, hsla(258, 79%, 19%, 0.781), #825cce);
+      background-color: #031d44;
+      background-image: linear-gradient(90deg, #121f56 0%, #0496ff 100%);
     `}
 
   @media (max-width: 900px) {
@@ -68,7 +69,7 @@ export const ListContainer = styled.ul`
   }
 `;
 export const List = styled.li`
-  height: 80%;
+  height: 60%;
   max-width: 100px;
   display: flex;
   flex-direction: row;
@@ -78,17 +79,21 @@ export const List = styled.li`
   background-color: transparent;
   text-decoration: none;
   list-style: none;
+  border-radius: ${({ contact }) => (contact ? '10px' : '')};
   outline: none;
   cursor: pointer;
   color: #f4f4f4f4;
-
-  border-bottom: 2px solid transparent;
+  border: 2px solid ${({ contact }) => (contact ? '#fca311' : 'transparent')};
+  border-bottom: 2px solid
+    ${({ contact }) => (contact ? '#FCA311' : 'transparent')};
   font-size: 1.1rem;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    color: #f4f6f8f8;
-    border-bottom: 2px solid #c4c4c9c7;
+    color: ${({ contact }) => (contact ? '#f4f4f4' : '')};
+    border-bottom: 2px solid
+      ${({ contact }) => (contact ? 'transparent' : '#fca311')};
+    background-color: ${({ contact }) => (contact ? '#fca311' : '')};
   }
 `;
 

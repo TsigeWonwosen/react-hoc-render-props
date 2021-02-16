@@ -2,21 +2,21 @@ import React, { useContext } from 'react';
 
 import styled from 'styled-components';
 import { userContext } from '../../context/userContext';
-import { PageForm,  Posts } from '../../components';
+import { PageForm, Posts, Head, About, Service, Card } from '../../components';
 function Home() {
-  // const [page, setPage] = useState(1);
   const { posts, error, loading } = useContext(userContext);
   return (
-    <div className="app-body">
-      <ContainerPosts id="posts">
-        <Title>Blogs</Title>
-        <Line />
-
-        <PageForm posts={posts} />
-        {loading ? <h3>Loading ... </h3> : <Posts />}
-        {error && <div>{error}</div>}
-      </ContainerPosts>
-    </div>
+    <ContainerPosts>
+      <Head />
+      <About />
+      <Service />
+      <Title id="posts">Blogs</Title>
+      <Line />
+      <PageForm posts={posts} />
+      {loading ? <h3>Loading ... </h3> : <Posts />}
+      {error && <div>{error}</div>}
+      <Card />
+    </ContainerPosts>
   );
 }
 
@@ -27,9 +27,8 @@ export const ContainerPosts = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0rem 3rem;
   text-align: left;
-  background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+  background-image: radial-gradient(90deg, #5c0067 0%, #00d4ff 100%);
 `;
 
 export const Title = styled.h2`

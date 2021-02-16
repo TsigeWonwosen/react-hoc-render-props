@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
-  margin: 0;
-  padding: 3rem 1rem 1rem;
+  margin: 0 0;
+  padding: 3rem 1rem 3rem;
   box-sizing: border-box;
   color: white;
   font-family: 'DM Mono', monospace;
@@ -14,6 +14,7 @@ export const Title = styled.h2`
   margin-bottom: 1rem;
   font-weight: 700;
   letter-spacing: 2px;
+  text-align: center;
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.8);
 `;
@@ -25,7 +26,7 @@ export const Line = styled.div`
   background-color: rgba(165, 167, 182, 0.96);
   width: 150px;
   text-align: center;
-  border-radius:15px;
+  border-radius: 15px;
 `;
 
 export const CardList = styled.section`
