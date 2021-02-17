@@ -43,7 +43,7 @@ export const BlogInfo = styled.section`
 `;
 
 export const Button = styled(Link)`
-  padding: 5px 1.5rem;
+  padding: 10px 1.5rem;
   border-radius: 5px;
   margin: 1.5rem 3rem 1rem;
   font-size: 1rem;

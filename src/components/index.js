@@ -9,6 +9,8 @@ export { default as ListUser } from './home/ListUser.jsx';
 export { default as Cat } from './home/Cat.jsx';
 export { default as About } from './about/About.jsx';
 export { default as Service } from './service/Service.jsx';
+export { default as Login } from './login/Login.jsx';
+export { default as Contact } from './contact/Contact.jsx';
 
 export { default as Head } from './hero/Head.jsx';
 export { default as PageForm } from './home/PageForm.jsx';

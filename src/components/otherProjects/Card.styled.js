@@ -6,7 +6,7 @@ export const CardContainer = styled.div`
   box-sizing: border-box;
   color: white;
   font-family: 'DM Mono', monospace;
-  background-color: #080855ab;
+  background-color: #0A1128;
 `;
 
 export const Title = styled.h2`

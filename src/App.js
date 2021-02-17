@@ -3,11 +3,10 @@ import React from 'react';
 import { UserProvider } from './context/userContext';
 import ScrollToTop from './context/ScrollToTop';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { NavBar, Footer, Home, useRequest, Blog } from './components';
+import { NavBar, Footer, Home, useRequest, Blog ,Login,Contact } from './components';
 
 import './App.css';
-const Contact = () => <div>Contact</div>;
-const Login = () => <div>Loin</div>;
+
 function App() {
   const { posts, loading, error } = useRequest(
     'https://wonde-strapi-admin.herokuapp.com/blogs',

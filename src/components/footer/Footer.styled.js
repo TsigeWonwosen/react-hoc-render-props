@@ -6,7 +6,7 @@ export const FooterWrapper = styled.div`
   flex-direction: column;
   min-height: 300px;
   padding: 2rem 2rem 2rem;
-  background-color: #393a10;
+  background-color: #06262b;
   gap: 0.4rem;
   justify-items: center;
 `;
@@ -97,7 +97,7 @@ export const List = styled.li`
   cursor: pointer;
   width: auto;
   border-bottom: 1px solid transparent;
-  transition: hover 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out;
 
   &:hover {
     border-bottom: 1px solid #ffffff;
