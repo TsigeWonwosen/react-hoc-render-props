@@ -17,12 +17,15 @@ function About() {
         <Title>About Me</Title>
         <Line />
         <Paragraph>
-          I am a software developer by profession with formal education in
-          computer science (yah there was a time where we had to visit a place
-          to learn something). Over the period of time I have developed niche
-          skills of using google and stack-overflow which helped me survive
-          grow. I am also believer of free & open education for everyone and try
-          to do my bits whenever I get time.
+          I am a Tsige Wondwosen shiferaw a Fullstack developer by profession
+          with formal education in computer science (Master's from Politecnico
+          di Torino). Currently i am looking full time position. Through my
+          education and work experience a learned a lot how to create a web site
+          front end to back end. Currently i am working on my owen projects.
+          <br />
+          Here is a list of technologies that I use in my work: JavaScript(ES6)
+          , React , Node , Mongoose, Redux , Gatsby , Sass , Styled
+          Components,Strapi , Firebase , GitHub Npm .
         </Paragraph>
       </AboutText>
 
