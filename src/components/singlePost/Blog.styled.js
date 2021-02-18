@@ -76,12 +76,10 @@ export const Title = styled.h2`
   color: rgba(255, 255, 255, 0.94);
 `;
 
-export const Body = styled.h6`
+export const Body = styled.section`
   font-size: 1rem;
   padding: 1rem 3rem;
   color: #848c8e;
-  line-height: 1.8rem;
-  text-align: left;
   margin: 1rem 0 3rem;
   font-weight: 300;
 `;
