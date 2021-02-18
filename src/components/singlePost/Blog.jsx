@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import ReactMarkdown from 'react-markdown';
 import { useParams } from 'react-router-dom';
 import moment from 'moment';
 import {
@@ -31,9 +32,10 @@ function Blog() {
     name,
     email,
     title,
-    body,
+    content,
+
     published_at,
-    updatedAt,
+
     image: { url },
   } = SinglePost[0];
   let newPublishedAt = moment(published_at).format('MMM-Do-YYYY');
@@ -51,7 +53,9 @@ function Blog() {
           </PublishAt>
         </BlogInfo>
 
-        <Body>{body}</Body>
+        <Body>
+          <ReactMarkdown source={content} />
+        </Body>
       </Content>
     </Wrapper>
   );
