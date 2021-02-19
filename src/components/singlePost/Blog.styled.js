@@ -53,7 +53,6 @@ export const Button = styled(Link)`
   color: #fca311;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  z-index: 30;
 
   &:hover {
     background: #fca311;
