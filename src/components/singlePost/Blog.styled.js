@@ -12,7 +12,7 @@ export const Content = styled.section`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #eaf4d3;
+  background-color: #ffffff;
   width: 70%;
   color: blue;
   margin: 7rem auto 2rem;
