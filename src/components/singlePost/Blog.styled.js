@@ -93,12 +93,13 @@ export const Body = styled.section`
   h5,
   h6 {
     margin: 1.5rem 0.1rem;
-    color: #4222;
+    color: #000000;
     font-size: 1.4rem;
   }
 
   & > p {
     margin: 1.2rem 0rem;
+    font-size: 1rem;
   }
 
   & > ul li::marker {
