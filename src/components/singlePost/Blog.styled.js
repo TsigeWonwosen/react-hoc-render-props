@@ -43,9 +43,9 @@ export const BlogInfo = styled.section`
 `;
 
 export const Button = styled(Link)`
-  padding: 10px 1.5rem;
+  padding: 7px 1.5rem;
   border-radius: 5px;
-  margin: 1.5rem 3rem 1rem;
+  margin: 1.3rem 3rem 1rem;
   font-size: 1rem;
   text-decoration: none;
   width: auto;
@@ -53,6 +53,7 @@ export const Button = styled(Link)`
   color: #fca311;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  z-index: 30;
 
   &:hover {
     background: #fca311;
@@ -82,4 +83,37 @@ export const Body = styled.section`
   color: #848c8e;
   margin: 1rem 0 3rem;
   font-weight: 300;
+  line-height: 1.5;
+
+  & > h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 1.5rem 0.1rem;
+    color: #4222;
+    font-size: 1.4rem;
+  }
+
+  & > p {
+    margin: 1.2rem 0rem;
+  }
+
+  & > ul li::marker {
+    font-size: 150%;
+    color: rgb(175, 230, 175);
+    padding: 1rem 2px;
+  }
+
+  & > ol li::marker {
+    color: rgb(214, 209, 161);
+    font-weight: bold;
+    padding: 1.5rem 2px;
+  }
+
+  & > img {
+    border-radius: 10px;
+    margin: 1.5rem 0rem;
+  }
 `;

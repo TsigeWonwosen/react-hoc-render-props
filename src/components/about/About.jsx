@@ -16,7 +16,7 @@ function About() {
       <AboutText>
         <Title>About Me</Title>
         <Line />
-        <Paragraph>
+        <Paragraph className="paragraph">
           I am a Tsige Wondwosen shiferaw a Fullstack developer by profession
           with formal education in computer science (Master's from Politecnico
           di Torino). Currently i am looking full time position. Through out my
