@@ -106,4 +106,6 @@ export const List = styled.li`
 
 export const Span = styled.span`
   color: #f4743b;
+  font-size: 1.6rem;
+  text-decoration: capitalized;
 `;

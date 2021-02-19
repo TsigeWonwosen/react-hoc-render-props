@@ -90,17 +90,29 @@ export const Body = styled.section`
   h4,
   h5,
   h6 {
-    margin: 1.5rem 0.1rem;
+    margin: 1.3rem 0.1rem;
+    color: #000000;
+    font-size: 1.4rem;
+  }
+
+  & > ol > h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 1.3rem 0.1rem;
     color: #000000;
     font-size: 1.4rem;
   }
   & > p {
     margin: 1.2rem 0rem;
     font-size: 0.8rem;
+    color: #1f0709;
   }
 
   & > ol > li {
-    margin: 1.5rem 0.1rem;
+    margin: 1.3rem 0.1rem;
     color: #000000;
     font-size: 1.4rem;
   }
@@ -110,73 +122,9 @@ export const Body = styled.section`
     padding: 1rem 2px;
     font-size: 1.6rem;
   }
-`;
 
-/* 
-& > ol > h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6{
-     margin: 1.5rem 0.1rem;
-    color: #000000;
-    font-size: 1.4rem;
-  } */
-/* & > p {
-    margin: 1.2rem 0rem;
-    font-size: 1rem;
-  } */
-
-/* & > ul > li::marker {
-    color: rgb(175, 230, 175);
-    padding: 1rem 2px;
-  }
-
-  & > ol >  li::marker {
-    color: rgb(214, 209, 161);
-    font-weight: bold;
-    padding: 1.5rem 2px;
-  } */
-
-/* & > ol > li::marker > blockquote { 
-   background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: '\201C''\201D''\2018''\2019';
-
-  &::before{
-     color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-  } 
-  
-   & > p{ color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;}
-
-  } 
-
-/* 
-& > blockquote::before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-& > blockquote > p {
-  display: inline;
-} */
-/* & > p > img {
+  & > p > img {
     border-radius: 10px;
     margin: 1.5rem 0rem;
-  } */
+  }
+`;

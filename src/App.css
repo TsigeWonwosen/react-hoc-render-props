@@ -38,7 +38,7 @@ h4 {
 p,
 span {
   font-family: 'Roboto Mono', 'Open Sans', sans-serif;
-  color: rgba(77, 87, 84, 0.658);
+  color: rgba(182, 194, 190, 0.658);
   font-size: 0.8rem;
   line-height: 1.6rem;
   text-align: left;
@@ -191,14 +191,14 @@ body::-webkit-scrollbar-track {
 }
 
 blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
+  background: #c5ebee;
+  border-left: 10px solid #e7cb2e;
   margin: 1.5em 10px;
-  padding: 0.5em 10px;
+  padding: 0.7rem 10px;
   quotes: '\201C''\201D''\2018''\2019';
 }
 blockquote:before {
-  color: #ccc;
+  color: rgb(255, 249, 249);
   content: open-quote;
   font-size: 4em;
   line-height: 0.1em;
@@ -207,4 +207,5 @@ blockquote:before {
 }
 blockquote p {
   display: inline;
+  color: rgb(33, 52, 138);
 }

@@ -1,9 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { UserProvider } from './context/userContext';
 import ScrollToTop from './context/ScrollToTop';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { NavBar, Footer, Home, useRequest, Blog ,Login,Contact } from './components';
+
+import {
+  NavBar,
+  Footer,
+  Home,
+  useRequest,
+  Blog,
+  Login,
+  Contact,
+} from './components';
 
 import './App.css';
 
@@ -19,15 +28,9 @@ function App() {
         <UserProvider value={{ posts, error, loading }}>
           <NavBar />
           <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/contact">
-              <Contact />
-            </Route>
-            <Route exact path="/login">
-              <Login />
-            </Route>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/login" component={Login} />
             <Route path="/blogs/:id" render={(props) => <Blog {...props} />} />
           </Switch>
           <Footer />
