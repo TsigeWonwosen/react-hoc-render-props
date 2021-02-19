@@ -31,17 +31,18 @@ h4,
 h5,
 h6 {
   font-family: 'Titillium Web', 'Roboto Mono', monospace, sans-serif;
-  color: rgba(199, 195, 189, 0.671);
+  color: rgba(152, 171, 194, 0.671);
+  font-size: 1.5rem;
 }
 h4 {
   color: #a7acad;
-  margin: 0.4rem 0.1rem;
-  font-size: 1rem;
+  margin: rem 0.1rem;
+  font-size: 1.5rem;
 }
 p,
 span {
   font-family: 'Roboto Mono', 'Open Sans', sans-serif;
-  color: rgba(121, 125, 126, 0.658);
+  color: rgba(77, 87, 84, 0.658);
   font-size: 0.8rem;
   line-height: 1.6rem;
   text-align: left;
@@ -51,7 +52,17 @@ ol li::marker {
   font-weight: bold;
   padding: 1rem 2px;
 }
-
+li > h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1rem 0;
+}
+li > p {
+  margin: 1rem 0;
+}
 ul li::marker {
   font-size: 150%;
   color: rgb(175, 230, 175);
