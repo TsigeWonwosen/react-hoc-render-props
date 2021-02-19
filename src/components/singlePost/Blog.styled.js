@@ -85,7 +85,8 @@ export const Body = styled.section`
   font-weight: 300;
   line-height: 1.5;
 
-  & > h1,
+  & > ol,
+  ul > h1,
   h2,
   h3,
   h4,
@@ -112,7 +113,7 @@ export const Body = styled.section`
     padding: 1.5rem 2px;
   }
 
-  & > img {
+  & > p > img {
     border-radius: 10px;
     margin: 1.5rem 0rem;
   }
