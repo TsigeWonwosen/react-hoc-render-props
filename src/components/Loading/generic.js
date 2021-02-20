@@ -5,15 +5,16 @@ export const Section = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 300px;
   color: #fff;
 `;
 
 export const Prop = styled.h3`
   color: white;
-  font-size: 50px;
-  margin: 2rem 0;
+  font-size: 1.3rem;
+  text-align: center;
+  width: auto;
 `;
 export const list = [
   {
