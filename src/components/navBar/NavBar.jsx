@@ -69,16 +69,7 @@ const NavBar = () => {
           </NewLink>
         </List>
         <List>
-          <NewLink
-            to="posts"
-            smooth={true}
-            duration={2000}
-            spy={true}
-            delay={100}
-            offset={-450}
-          >
-            Blogs
-          </NewLink>
+         <LinkStyled to="/blogs">Blogs</LinkStyled>
         </List>
         <List>
           <NewLink

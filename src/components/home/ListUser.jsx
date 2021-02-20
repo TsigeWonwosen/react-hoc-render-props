@@ -17,7 +17,7 @@ import {
 function ListUser({ title, body, _id, email, image: { url }, createdAt }) {
   let date = new window.Date(createdAt);
   date = moment(date).format('MMM-Do-YYYY');
-  let TextBody = body.length > 100 ? body.substr(0, 120) + ' ...' : body;
+  let TextBody = body.length > 100 ? body.substr(0, 110) + ' ...' : body;
   return (
     <Card>
       <BodyContainer>
@@ -27,13 +27,12 @@ function ListUser({ title, body, _id, email, image: { url }, createdAt }) {
             <Header>{email}</Header>
             <Date> Published on {date}</Date>
           </ArticleInfo>
-          <Title>{title}</Title>
+          <Title>{title.substr(0, 50)}</Title>
           <PostBody>{TextBody}</PostBody>
         </Body>
       </BodyContainer>
       <Tags>
         <LinkTo to={`/blogs/${_id}`}>Read More</LinkTo>
-        <LinkTo to="#">Likes</LinkTo>
       </Tags>
     </Card>
   );

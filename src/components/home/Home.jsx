@@ -1,18 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import styled from 'styled-components';
-import { userContext } from '../../context/userContext';
-import { Head, About, Service, Card, Loading, Posts } from '../../components';
+import { Head, About, Service, Card, Blogs } from '../../components';
 
 function Home() {
-  const { error, loading } = useContext(userContext);
   return (
     <ContainerPosts>
       <Head />
       <About />
       <Service />
-      {loading ? <Loading /> : <Posts />}
-      {error && <div>{error}</div>}
+      <Blogs featured />
       <Card />
     </ContainerPosts>
   );

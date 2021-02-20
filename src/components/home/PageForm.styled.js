@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.section`
   display: flex;
@@ -43,4 +44,8 @@ export const SinglePaginationItem = styled.span`
     padding: 3px 8px;
     margin: 0 1px;
   }
+`;
+export const Button = styled(Link)`
+  color: white;
+  border-color: white;
 `;

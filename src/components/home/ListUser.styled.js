@@ -100,12 +100,13 @@ export const Body = styled.div`
   justify-content: space-around;
   align-items: flex-start;
   margin-top: auto;
+  margin-bottom: 2rem;
 `;
 
 export const Title = styled.h4`
   padding: 0;
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.856);
 `;
 export const PostBody = styled.h6`
@@ -116,9 +117,10 @@ export const PostBody = styled.h6`
 export const Tags = styled.div`
   width: 100%;
   height: 10%;
-  margin: 0.7rem 0;
+  padding: 0rem 2rem;
+  margin-bottom: 0.7rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   line-height: 2;
   background-color: transparent;
   opacity: 0;
@@ -138,18 +140,19 @@ export const LinkTo = styled(Link)`
   align-items: center;
   font-style: normal;
   font-weight: 700;
-  font-size: 0.8rem;
-  color: #b9b9e9;
+  font-size: 0.9rem;
+  color: #fca311;
   text-transform: uppercase;
   font-size: 0.66rem;
-  border: 1px solid #4296b8;
-  border-radius: 2rem;
-  padding: 0.3rem 0.4rem;
+  border: 1px solid #fca311;
+  border-radius: 10px;
+  padding: 0.5rem 0.4rem;
   position: relative;
-  max-width: 40%;
-  transition: hover 0.2s ease-in-out;
+  max-width: 100%;
+  transition: hover 0.3s ease-in-out;
   &:hover {
     color: #cfcfe0;
     transform: translateY(-2px);
+    background-color: #fca311;
   }
 `;

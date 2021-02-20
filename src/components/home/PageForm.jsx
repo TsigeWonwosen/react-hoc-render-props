@@ -1,13 +1,13 @@
 import React from 'react';
-import { SinglePaginationItem, Container } from './PageForm.styled';
+import { SinglePaginationItem, Container ,Button } from './PageForm.styled';
 
-function PageForm({ setPage, posts }) {
+function PageForm({ posts }) {
   const Pagination = () => {
     let singlePag;
     if (posts.length > 0) {
       singlePag = posts.map((post, index) => (
-        <SinglePaginationItem onClick={() => setPage(index)} key={index}>
-          {index + 1}
+        <SinglePaginationItem>
+          <Button to={`/blogs/${post._id}`}> {index + 1}</Button>
         </SinglePaginationItem>
       ));
     }
@@ -18,3 +18,5 @@ function PageForm({ setPage, posts }) {
 }
 
 export default PageForm;
+
+

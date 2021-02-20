@@ -10,6 +10,7 @@ import {
   Home,
   useRequest,
   Blog,
+  Blogs,
   Login,
   Contact,
 } from './components';
@@ -31,6 +32,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/blogs" component={Blogs} />
             <Route path="/blogs/:id" render={(props) => <Blog {...props} />} />
           </Switch>
           <Footer />

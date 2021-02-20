@@ -20,3 +20,4 @@ export { default as PageForm } from './home/PageForm.jsx';
 export { default as Card } from './otherProjects/Card.jsx';
 export { default as Footer } from './footer/Footer.js';
 export { default as Blog } from './singlePost/Blog.jsx';
+export { default as Blogs } from './blogs/Blogs.jsx';

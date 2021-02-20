@@ -41,9 +41,7 @@ function Blog() {
     <Wrapper>
       <Content>
         <ImageSingle src={url} alt={name} />
-
-        <Button to="/">Back to Home</Button>
-
+        <Button to="/blogs">Back to Blogs</Button>
         <BlogInfo>
           <Title> {title}</Title>
           <PublishAt>

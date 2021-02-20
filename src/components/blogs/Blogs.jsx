@@ -2,38 +2,45 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import { userContext } from '../../context/userContext';
-
+import ListUser from '../home/ListUser';
 import styled from 'styled-components';
+import { PageForm, Loading } from '../../components';
 
-import ListUser from './ListUser';
-import { Loading } from '../../components';
-
-function Posts() {
+function Blogs({ featured }) {
   const { posts, error, loading } = useContext(userContext);
 
   if (error) return <h2> {error}</h2>;
-  if (loading) {
-    return <Loading />;
-  }
 
-  let featuredPosts = posts.filter((post) => post.featured === true);
+  if (loading) return <Loading />;
+  let Posts = featured ? posts.filter((post) => post.featured === true) : posts;
   return (
-    <>
-      <Title id="posts">Featured Blogs</Title>
+    <ContainerPosts featured={featured}>
+      <Title id="posts">{featured ? 'Featured Blogs' : 'All Blogs'}</Title>
       <Line />
+      {!featured && <PageForm posts={posts} />}
       <CardContainer>
         <WrapperPosts>
-          {featuredPosts.map((post) => (
+          {Posts.map((post) => (
             <ListUser key={post._id} {...post} />
           ))}
         </WrapperPosts>
       </CardContainer>
-      <Button to="blogs">All Blogs</Button>
-    </>
+      {featured && <Button to="blogs">All Blogs</Button>}
+    </ContainerPosts>
   );
 }
 
-export default Posts;
+export default Blogs;
+
+export const ContainerPosts = styled.section`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  margin-top: ${({ featured }) => (!featured ? '4rem' : '0rem')};
+  background-image: radial-gradient(90deg, #5c0067 0%, #00d4ff 100%);
+`;
 
 export const WrapperPosts = styled.section`
   display: grid;
@@ -81,7 +88,7 @@ export const Title = styled.h2`
   font-size: 3rem;
   padding: 1rem 0;
   margin-bottom: 0.1rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
   z-index: 20;
 
   @media (max-width: 900px) {
