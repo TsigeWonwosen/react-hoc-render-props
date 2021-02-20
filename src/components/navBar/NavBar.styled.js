@@ -1,12 +1,37 @@
 import styled, { css, keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
-export const Container = styled.section`
-  height: 80px;
+
+export const WrapperContainer = styled.div`
+  height: 95px;
   width: 100%;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  background-color: transparent;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
+  z-index: 30;
+  ${(props) =>
+    props.primary &&
+    css`
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+      border-bottom: 1px solid rgba(163, 159, 159, 0.3);
+      background-color: #031d44;
+      background-image: linear-gradient(180deg, #3d0d09 0%, #fca311 100%);
+    `}
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    height: 90px;
+  }
+`;
+export const Container = styled.section`
+  height: 75px;
+  width: 100%;
+  /* position: fixed;
+  top: 0;
+  right: 0;
+  left: 0; */
   background-color: transparent;
   display: flex;
   justify-content: space-around;
@@ -18,8 +43,8 @@ export const Container = styled.section`
   ${(props) =>
     props.primary &&
     css`
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
-      border-bottom: 1px solid rgba(163, 159, 159, 0.3);
+      /* box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+      border-bottom: 1px solid rgba(163, 159, 159, 0.3); */
       background-color: #031d44;
       background-image: linear-gradient(90deg, #121f56 0%, #0496ff 100%);
     `}
