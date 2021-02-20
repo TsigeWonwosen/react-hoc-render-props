@@ -1,5 +1,5 @@
 import React from 'react';
-import useMouse from '../useMouse.jsx';
+import useMouse from '../utility/useMouse.jsx';
 const Cat = ({ name }) => {
   const { count, handleCount, resetCount } = useMouse();
 

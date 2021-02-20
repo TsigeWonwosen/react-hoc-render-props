@@ -33,9 +33,7 @@ function Blog() {
     email,
     title,
     content,
-
     published_at,
-
     image: { url },
   } = SinglePost[0];
   let newPublishedAt = moment(published_at).format('MMM-Do-YYYY');
@@ -44,7 +42,7 @@ function Blog() {
       <Content>
         <ImageSingle src={url} alt={name} />
 
-        <Button to="/">Go Back</Button>
+        <Button to="/">Back to Home</Button>
 
         <BlogInfo>
           <Title> {title}</Title>

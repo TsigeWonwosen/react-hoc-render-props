@@ -1,12 +1,15 @@
 export { default as NavBar } from './navBar/NavBar.jsx';
-export { default as Mouse } from './useMouse.jsx';
-export { default as useRequest } from './useRequest.jsx';
-export { default as withMouse } from './withMouse.jsx';
+export { default as Mouse } from './utility/useMouse.jsx';
+export { default as useRequest } from './utility/useRequest.jsx';
+export { default as withMouse } from './utility/withMouse.jsx';
+export { default as Loading } from './Loading/Loading.js';
+
 export { default as Dog } from './home/Dog.jsx';
 export { default as Home } from './home/Home.jsx';
 export { default as Posts } from './home/Posts.jsx';
 export { default as ListUser } from './home/ListUser.jsx';
 export { default as Cat } from './home/Cat.jsx';
+
 export { default as About } from './about/About.jsx';
 export { default as Service } from './service/Service.jsx';
 export { default as Login } from './login/Login.jsx';

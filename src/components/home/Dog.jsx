@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import useMouse from '../../components/useMouse.jsx';
+import useMouse from '../utility/useMouse';
 
 import DogImage from '../../img/backgraund2.jpg';
 
