@@ -105,6 +105,12 @@ export const Body = styled.section`
     color: #000000;
     font-size: 1.4rem;
   }
+  & > ol > li > p {
+    margin: 1.2rem 0rem;
+    font-size: 0.8rem;
+    color: #1f0709;
+  }
+
   & > p {
     margin: 1.2rem 0rem;
     font-size: 0.8rem;
