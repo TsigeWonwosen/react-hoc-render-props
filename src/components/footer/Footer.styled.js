@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const WrapperContainer = styled.div`
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #fca311;
+`;
 export const FooterWrapper = styled.div`
   margin-top: 0;
   display: flex;
@@ -9,6 +15,7 @@ export const FooterWrapper = styled.div`
   background-color: #06262b;
   gap: 0.4rem;
   justify-items: center;
+  clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0 100%);
 `;
 
 export const Grid = styled.div`

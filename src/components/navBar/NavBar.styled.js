@@ -17,7 +17,7 @@ export const WrapperContainer = styled.div`
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
       border-bottom: 1px solid rgba(163, 159, 159, 0.3);
       background-color: #031d44;
-      background-image: linear-gradient(180deg, #3d0d09 0%, #fca311 100%);
+      background-image: linear-gradient(180deg, #3d0d09, #fca311);
     `}
 
   @media (max-width: 900px) {
@@ -28,31 +28,36 @@ export const WrapperContainer = styled.div`
 export const Container = styled.section`
   height: 75px;
   width: 100%;
-  /* position: fixed;
-  top: 0;
-  right: 0;
-  left: 0; */
+
   background-color: transparent;
   display: flex;
   justify-content: space-around;
   z-index: 30;
   color: rgba(204, 211, 210, 0.965);
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   transition: 0.3s ease-in-out;
 
   ${(props) =>
     props.primary &&
     css`
-      /* box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
-      border-bottom: 1px solid rgba(163, 159, 159, 0.3); */
-      background-color: #031d44;
-      background-image: linear-gradient(90deg, #121f56 0%, #0496ff 100%);
+      background-color: #0a1128;
+      background-image: linear-gradient(45deg, #0a1128, #0496ff 90%);
     `}
 
   @media (max-width: 900px) {
     flex-direction: column;
     height: 90px;
+    padding: 0 1rem;
   }
+`;
+export const Content = styled.section`
+  max-width: 1200px;
+  height: 75px;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 export const LogoName = styled.h3`
   letter-spacing: 1px;
@@ -79,6 +84,7 @@ export const LogoName = styled.h3`
 
 export const ListContainer = styled.ul`
   width: 100%;
+  height: 80%;
   background-color: transparent;
   display: flex;
   flex-direction: row;
@@ -94,7 +100,7 @@ export const ListContainer = styled.ul`
   }
 `;
 export const List = styled.li`
-  height: 60%;
+  height: 75%;
   max-width: 100px;
   display: flex;
   flex-direction: row;
@@ -160,19 +166,16 @@ export const Image = styled.img`
 export const moveVertically = keyframes`
        0% {
     background-image: linear-gradient(
-      to right,
-      rgb(0, 128, 100) 0%,
-      hsl(59, 100%, 50%) 50%,
-      #b4e52e 100%
+    #FCA311,
+      #b4e52e 
     );
   }
 
   100% {
     background-image: linear-gradient(
-      to right,
-      red 0%,
-      hsl(54, 100%, 50%) 50%,
-      #d62ee5 100%
+     
+      rgba(250, 200, 10,0.8) ,
+      #FFFF 
     );
   }
 `;

@@ -3,6 +3,7 @@ import { Link as NewLink, animateScroll as scroll } from 'react-scroll';
 import {
   WrapperContainer,
   Container,
+  Content,
   ListContainer,
   List,
   Flag,
@@ -39,62 +40,64 @@ const NavBar = () => {
   return (
     <WrapperContainer primary={navBc}>
       <Container primary={navBc}>
-        <Logo id="home">
-          <LogoName
-            onClick={() =>
-              scroll.scrollToTop({
-                duration: 2000,
-                delay: 100,
-                smooth: true,
-                behavior: 'smooth',
-              })
-            }
-            move={moveVertically}
-          >
-            Wonde.Shi
-          </LogoName>
-        </Logo>
-        <ListContainer>
-          <List>
-            <LinkStyled to="/">Home</LinkStyled>
-          </List>
-          <List>
-            <NewLink
-              to="about"
-              smooth={true}
-              duration={2000}
-              spy={true}
-              delay={100}
-              offset={-100}
+        <Content>
+          <Logo id="home">
+            <LogoName
+              onClick={() =>
+                scroll.scrollToTop({
+                  duration: 2000,
+                  delay: 100,
+                  smooth: true,
+                  behavior: 'smooth',
+                })
+              }
+              move={moveVertically}
             >
-              About
-            </NewLink>
-          </List>
-          <List>
-            <LinkStyled to="/blogs">Blogs</LinkStyled>
-          </List>
-          <List>
-            <NewLink
-              to="project"
-              smooth={true}
-              duration={2000}
-              spy={true}
-              delay={100}
-              offset={-40}
-            >
-              Projects
-            </NewLink>
-          </List>
-          <List contact={true}>
-            <LinkStyled to="/contact">Contact</LinkStyled>
-          </List>
-          <List>
-            <LinkStyled to="/login">Login</LinkStyled>
-          </List>
-        </ListContainer>
-        <Flag>
-          <Image src="//s.svgbox.net/flags-ld.svg?ic=et" alt="flag" />
-        </Flag>
+              Wonde.Shi
+            </LogoName>
+          </Logo>
+          <ListContainer>
+            <List>
+              <LinkStyled to="/">Home</LinkStyled>
+            </List>
+            <List>
+              <NewLink
+                to="about"
+                smooth={true}
+                duration={2000}
+                spy={true}
+                delay={100}
+                offset={-100}
+              >
+                About
+              </NewLink>
+            </List>
+            <List>
+              <LinkStyled to="/blogs">Blogs</LinkStyled>
+            </List>
+            <List>
+              <NewLink
+                to="project"
+                smooth={true}
+                duration={2000}
+                spy={true}
+                delay={100}
+                offset={-40}
+              >
+                Projects
+              </NewLink>
+            </List>
+            <List contact={true}>
+              <LinkStyled to="/contact">Contact</LinkStyled>
+            </List>
+            <List>
+              <LinkStyled to="/login">Login</LinkStyled>
+            </List>
+          </ListContainer>
+          <Flag>
+            <Image src="//s.svgbox.net/flags-ld.svg?ic=et" alt="flag" />
+          </Flag>
+        </Content>
       </Container>
     </WrapperContainer>
   );
