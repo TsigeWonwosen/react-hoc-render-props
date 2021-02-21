@@ -22,7 +22,8 @@ export const WrapperContainer = styled.div`
 
   @media (max-width: 900px) {
     flex-direction: column;
-    height: 90px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+    height: 120px;
   }
 `;
 export const Container = styled.section`
@@ -46,8 +47,10 @@ export const Container = styled.section`
 
   @media (max-width: 900px) {
     flex-direction: column;
-    height: 90px;
+    height: 110px;
     padding: 0 1rem;
+    background-color: #0a1128;
+    background-image: linear-gradient(45deg, #0a1128, #0496ff 90%);
   }
 `;
 export const Content = styled.section`
@@ -58,6 +61,10 @@ export const Content = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    height: 110px;
+  }
 `;
 export const LogoName = styled.h3`
   letter-spacing: 1px;
@@ -93,15 +100,18 @@ export const ListContainer = styled.ul`
   margin-left: auto;
   max-width: 34%;
   margin-right: 3.4rem;
-
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
+    max-width: 50%;
+  }
+  @media (max-width: 900px) {
     max-width: 90%;
     margin-right: 0rem;
+    height: 50%;
   }
 `;
 export const List = styled.li`
   height: 75%;
-  max-width: 100px;
+  width: 100px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -131,13 +141,27 @@ export const List = styled.li`
 export const Logo = styled.div`
   background-color: transparent;
   display: flex;
-  justify-content: center;
+  justify-content: flex-left;
   align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
   max-width: 20%;
-  transition: animation 0.4s ease-in-out;
+  transition: animation 0.5s ease-in-out;
   cursor: pointer;
+  & span {
+    padding: 0;
+    margin: 0;
+    color: red !important;
+    font-size: 1.4rem;
+  }
   @media (max-width: 900px) {
-    max-width: 40%;
+    max-width: 100%;
+  }
+
+  @media (max-width: 500px) {
+    max-width: 100%;
+    margin-left: 2rem;
   }
 `;
 
@@ -152,9 +176,13 @@ export const Flag = styled.div`
   border-left: 1px solid rgba(255, 255, 255, 0.8);
 
   @media (max-width: 900px) {
-    top: 10px;
-    right: 10px;
+    top: 1rem;
+    right: 1.5rem;
     border-left: 1px solid transparent;
+  }
+  @media (max-width: 500px) {
+    top: 15px;
+    right: 2rem;
   }
 `;
 

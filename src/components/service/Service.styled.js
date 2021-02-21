@@ -37,7 +37,7 @@ export const Content = styled.section`
 
   @media (max-width: 900px) {
     width: 100%;
-    padding: 2rem;
+    padding: 1.4rem;
   }
 `;
 
@@ -57,13 +57,15 @@ export const Title = styled.h2`
   z-index: 20;
 
   @media (max-width: 900px) {
+    letter-spacing: 1.2px;
     margin-bottom: 1.2rem;
     margin-top: 1rem;
+    font-size: 2.5rem;
   }
 `;
 export const Paragraph = styled.p`
   max-width: 70%;
-  color: #d9d9df;
+  color: rgba(255, 255, 255, 0.7);
   text-align: left;
   font-size: 1.4rem;
   line-height: 1.7rem;

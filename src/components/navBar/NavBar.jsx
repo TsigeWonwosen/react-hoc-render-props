@@ -53,7 +53,7 @@ const NavBar = () => {
               }
               move={moveVertically}
             >
-              Wonde.Shi
+              Wonde<span>.</span>Shi
             </LogoName>
           </Logo>
           <ListContainer>

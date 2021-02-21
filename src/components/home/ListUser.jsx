@@ -22,18 +22,18 @@ function ListUser({ title, body, _id, email, image: { url }, createdAt }) {
     <Card>
       <BodyContainer>
         <Image src={url} alt={title} />
+        <ArticleInfo>
+          <Header>{email}</Header>
+          <Date> Published on {date}</Date>
+        </ArticleInfo>
         <Body>
-          <ArticleInfo>
-            <Header>{email}</Header>
-            <Date> Published on {date}</Date>
-          </ArticleInfo>
           <Title>{title.substr(0, 50)}</Title>
           <PostBody>{TextBody}</PostBody>
         </Body>
+        <Tags>
+          <LinkTo to={`/blogs/${_id}`}>Read More</LinkTo>
+        </Tags>
       </BodyContainer>
-      <Tags>
-        <LinkTo to={`/blogs/${_id}`}>Read More</LinkTo>
-      </Tags>
     </Card>
   );
 }

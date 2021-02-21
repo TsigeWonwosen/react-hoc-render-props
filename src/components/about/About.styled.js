@@ -15,7 +15,11 @@ export const Wrapper = styled.div`
 
   @media (max-width: 900px) {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 4rem;
+    margin: 3rem 0 4rem 0;
+    padding: 2rem 1rem;
   }
 `;
 
@@ -29,6 +33,7 @@ export const AboutText = styled.section`
   padding: 2rem;
   @media (max-width: 900px) {
     width: 95%;
+    padding: 2rem 0.5rem;
   }
 `;
 export const ImageContainer = styled.section`
@@ -55,17 +60,17 @@ export const Image = styled(Profile)`
   position: center center;
 `;
 export const Title = styled.h2`
-  font-size: clamp(2rem, -0.875rem + 8vw, 3rem);
-  font-weight: 700;
+  font-size: clamp(2.4rem, -0.875rem + 8vw, 3rem);
+  font-weight: 800;
   letter-spacing: 2px;
   text-align: center;
   text-transform: capitalize;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 `;
 export const Paragraph = styled.p`
   max-width: clamp(600px, 8vw + 10px, 700px);
   font-size: clamp(0.9rem, -0.875rem + 8vw, 1rem);
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.6);
   font-family: 'Open Sans', sans-serif;
   line-height: 1.9rem;
   text-align: left;
@@ -75,7 +80,7 @@ export const Line = styled.div`
   margin: 2rem auto 2rem;
   padding: 0;
   height: 0.4rem;
-  background-color: rgba(165, 167, 182, 0.96);
+  background-color: rgba(255, 255, 252, 0.96);
   width: 150px;
   text-align: center;
   border-radius: 15px;

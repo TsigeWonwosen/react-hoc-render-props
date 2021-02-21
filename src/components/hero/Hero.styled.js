@@ -27,7 +27,8 @@ export const HeroContainer = styled.section`
   }
 
   @media (max-width: 900px) {
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    margin-top: 2rem;
   }
 `;
 
@@ -43,16 +44,27 @@ export const Overlay = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 900px) {
+    background-color: rgba(4, 29, 85, 0.8);
+  }
 `;
 
 export const HeaderOne = styled.h1`
   position: relative;
   background: transparent;
-  font-size: clamp(1rem, -0.875rem + 8vw, 2.5rem);
+  font-size: clamp(1.3rem, -0.875rem + 8vw, 2.2rem);
   font-weight: 800;
   text-align: center;
   color: rgba(229, 241, 240, 0.965);
   width: clamp(400px, 8vw -1rem, 500px);
+
+  @media (max-width: 900px) {
+    font-weight: 700;
+    color: rgba(229, 241, 240, 0.865);
+    width: 95%;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
 `;
 
 export const Text = styled.p`
@@ -62,10 +74,18 @@ export const Text = styled.p`
   line-height: 1.5rem;
   max-width: clamp(400px, 80vw, 700px);
   font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
 
   @media (max-width: 900px) {
-    margin: 1.5rem 0rem 1rem;
-    line-height: 1.3rem;
+    margin: 2rem auto 1.4rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    max-width: 80%;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  @media (max-width: 500px) {
+    max-width: 90%;
   }
 `;
 
@@ -80,7 +100,7 @@ export const ButtonContainer = styled.section`
   flex-direction: row;
   background: none;
   @media (max-width: 900px) {
-    max-width: 300px;
+    max-width: 60%;
   }
 `;
 
@@ -100,6 +120,7 @@ export const Button = styled.button`
   border: none;
   background: #fca311;
   color: #e2eeeef8;
+
   &:hover {
     color: #fca311;
     border: 1px solid white;
@@ -120,9 +141,9 @@ export const Button = styled.button`
     `}
 
   @media (max-width: 900px) {
-    max-width: 80px;
-    padding: 10px 1rem;
-    font-size: 1rem;
+    max-width: auto;
+    padding: 9px 0.5rem;
+    font-size: 0.8rem;
   }
 `;
 
