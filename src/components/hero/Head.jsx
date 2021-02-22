@@ -23,7 +23,7 @@ function Head() {
         <Text>
           This Project is built with React, Styled Components and Back end with
           Strapi.which has Navigation , About Me, Blogs , Other Projects
-          pages.All are factional && mobile friendlily.
+          pages.All are functional & mobile friendly.
         </Text>
 
         <ButtonContainer>
