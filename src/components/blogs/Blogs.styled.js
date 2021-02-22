@@ -7,8 +7,12 @@ export const ContainerPosts = styled.section`
   flex-direction: column;
   align-items: center;
   text-align: left;
-  margin-top: ${({ featured }) => (!featured ? '4rem' : '0rem')};
+  margin-top: ${({ featured }) => (!featured ? '4rem' : '2rem')};
   background-image: radial-gradient(90deg, #5c0067 0%, #00d4ff 100%);
+
+  @media (max-width: 900px) {
+    margin-top: ${({ featured }) => (!featured ? '7rem' : '0rem')};
+  }
 `;
 
 export const WrapperPosts = styled.section`

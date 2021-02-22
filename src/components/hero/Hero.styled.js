@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import HeroImage from '../../img/backgraund2.jpg';
+import HeroImage from '../../img/Background.jpg';
 
 export const HeroContainer = styled.section`
   position: relative;
@@ -7,7 +7,7 @@ export const HeroContainer = styled.section`
   z-index: 10;
   margin-top: 0;
   padding-top: 0;
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 89%, 0% 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0% 100%);
   filter: sepia(0.4);
 
   &:before {
@@ -17,13 +17,12 @@ export const HeroContainer = styled.section`
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
     background-image: url(${HeroImage});
-    background-position: top center;
+    background-position: bottom center;
     background-size: cover;
     object-fit: cover;
     background-repeat: 'no-repeat';
-    opacity: 0.48;
   }
 
   @media (max-width: 900px) {
@@ -52,7 +51,9 @@ export const Overlay = styled.section`
 export const HeaderOne = styled.h1`
   position: relative;
   background: transparent;
-  font-size: clamp(1.3rem, -0.875rem + 8vw, 2.2rem);
+  max-width: 90%;
+  text-transform: capitalize;
+  font-size: clamp(1.3rem, -0.875rem + 8vw, 2.5rem);
   font-weight: 800;
   text-align: center;
   color: rgba(229, 241, 240, 0.965);
@@ -69,18 +70,18 @@ export const HeaderOne = styled.h1`
 
 export const Text = styled.p`
   margin: 2rem 0rem 1.5rem;
-  font-size: 1rem;
   font-size: clamp(0.9rem, -0.875rem + 4vw, 1.1rem);
-  line-height: 1.5rem;
-  max-width: clamp(400px, 80vw, 700px);
+  line-height: 1.7rem;
+  text-align: center;
+  max-width: clamp(400px, 80vw, 75%);
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
 
   @media (max-width: 900px) {
     margin: 2rem auto 1.4rem;
     font-size: 1rem;
     line-height: 1.5rem;
-    max-width: 80%;
+    max-width: 850%;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.6);
   }
@@ -103,24 +104,40 @@ export const ButtonContainer = styled.section`
     max-width: 60%;
   }
 `;
+export const LinkGitHub = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+`;
 
 export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1560px;
-  padding: 10px 1.7rem;
+  width: 200px;
+  height: 40px;
+  padding: 0 1rem;
   margin: 1rem;
-  border-radius: 5px;
+  border-radius: 12px;
   outline: none;
-  font-size: 18px;
   font-weight: 800;
   cursor: pointer;
   position: relative;
   border: none;
   background: #fca311;
-  color: #e2eeeef8;
-
+  & span {
+    color: #e2eeeef8;
+    font-size: 0.9rem;
+    margin-right: 0.7rem;
+  }
+  & svg {
+    font-size: 0.5rem;
+    height: 20px;
+    width: 20px;
+    color: #e2eeeef8;
+  }
   &:hover {
     color: #fca311;
     border: 1px solid white;

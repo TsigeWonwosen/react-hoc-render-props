@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
+import { FaGithub } from 'react-icons/fa';
+import { AiOutlineMail } from 'react-icons/ai';
 
 import DownArrowIcons from '../../img/down-arrow.gif';
 
@@ -11,6 +13,7 @@ import {
   HeaderOne,
   Text,
   DownArrow,
+  LinkGitHub,
 } from './Hero.styled';
 function Head() {
   return (
@@ -18,24 +21,28 @@ function Head() {
       <Overlay>
         <HeaderOne>Design elements, React With Styled Components</HeaderOne>
         <Text>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
-          consectetur nihil omnis vero culpa optio placeat alias quis mollitia
-          adipisci?
+          This Project is built with React, Styled Components and Back end with
+          Strapi.which has Navigation , About Me, Blogs , Other Projects
+          pages.All are factional && mobile friendlily.
         </Text>
+
         <ButtonContainer>
-          <Button primary="primer"> Contact Me</Button>
+          <Button primary="primer">
+            <LinkGitHub to="/contact">
+              <span>Contact Me</span>
+              <AiOutlineMail />
+            </LinkGitHub>
+          </Button>
 
           <Button>
-            <Link
-              to="project"
-              smooth={true}
-              duration={2000}
-              spy={true}
-              delay={100}
-              offset={100}
+            <LinkGitHub
+              href="https://github.com/TsigeWonwosen/react-hoc-render-props"
+              target="_blank"
+              rel="noreferrer"
             >
-              See Projects
-            </Link>
+              <span>See Code </span>
+              <FaGithub />
+            </LinkGitHub>
           </Button>
         </ButtonContainer>
         <DownArrow src={DownArrowIcons} />
