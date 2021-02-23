@@ -35,8 +35,8 @@ export const HeroContainer = styled.section`
   }
 
   @media (max-width: 900px) {
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-    margin-top: 2rem;
+    /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); */
+    /* margin-top: 2rem; */
   }
 `;
 

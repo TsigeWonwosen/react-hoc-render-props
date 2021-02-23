@@ -90,7 +90,7 @@ a {
 }
 
 body::-webkit-scrollbar {
-  width: 14px;
+  width: 10px;
   height: 2px;
 }
 body::-webkit-scrollbar-thumb {
@@ -104,7 +104,7 @@ body::-webkit-scrollbar-thumb:hover {
   background: #091288;
 }
 body::-webkit-scrollbar-track {
-  background: linear-gradient(90deg, #462f7c, #251a3d 1px, #2a1653 0, #271a41);
+  background: linear-gradient(90deg, #64538b, #251a3d 1px, #2a1653 0, #271a41);
 }
 
 .app-container {
