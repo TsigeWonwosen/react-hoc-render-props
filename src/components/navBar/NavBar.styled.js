@@ -2,14 +2,14 @@ import styled, { css, keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const WrapperContainer = styled.div`
-  height: 95px;
+  height: 90px;
   width: 100%;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   background-color: transparent;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
   z-index: 30;
   ${(props) =>
     props.primary &&
@@ -17,7 +17,7 @@ export const WrapperContainer = styled.div`
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
       border-bottom: 1px solid rgba(163, 159, 159, 0.3);
       background-color: #031d44;
-      background-image: linear-gradient(180deg, #3d0d09, #fca311);
+      background-image: linear-gradient(180deg, #3d0d09, #f4743b);
     `}
 
   @media (max-width: 900px) {
@@ -124,17 +124,17 @@ export const List = styled.li`
   outline: none;
   cursor: pointer;
   color: #f4f4f4f4;
-  border: 2px solid ${({ contact }) => (contact ? '#fca311' : 'transparent')};
+  border: 2px solid ${({ contact }) => (contact ? '#f4743b' : 'transparent')};
   border-bottom: 2px solid
-    ${({ contact }) => (contact ? '#FCA311' : 'transparent')};
+    ${({ contact }) => (contact ? '#f4743b' : 'transparent')};
   font-size: 1.1rem;
   transition: all 0.3s ease-in-out;
 
   &:hover {
     color: ${({ contact }) => (contact ? '#f4f4f4' : '')};
     border-bottom: 2px solid
-      ${({ contact }) => (contact ? 'transparent' : '#fca311')};
-    background-color: ${({ contact }) => (contact ? '#fca311' : '')};
+      ${({ contact }) => (contact ? 'transparent' : '#f4743b')};
+    background-color: ${({ contact }) => (contact ? '#f4743b' : '')};
   }
 `;
 
@@ -194,7 +194,7 @@ export const Image = styled.img`
 export const moveVertically = keyframes`
        0% {
     background-image: linear-gradient(
-    #FCA311,
+    #F4f4f4,
       #b4e52e 
     );
   }

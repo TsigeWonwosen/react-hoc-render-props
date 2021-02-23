@@ -4,7 +4,7 @@ export const WrapperContainer = styled.div`
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #fca311;
+  background-color: #f4743b;
 `;
 export const FooterWrapper = styled.div`
   margin-top: 0;
@@ -12,10 +12,10 @@ export const FooterWrapper = styled.div`
   flex-direction: column;
   min-height: 300px;
   padding: 2rem 2rem 2rem;
-  background-color: #06262b;
+  background-image: linear-gradient(-41deg, #051147 0%, #2b307a 100%);
   gap: 0.4rem;
   justify-items: center;
-  clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(0 3%, 100% 0.7%, 100% 100%, 0 100%);
 `;
 
 export const Grid = styled.div`
@@ -41,7 +41,7 @@ export const Title = styled.h1`
   font-size: 2.4rem;
   line-height: 3rem;
   letter-spacing: 1px;
-  color: #eaf4d3;
+  color: #fff4d3;
   text-align: left;
 `;
 

@@ -1,14 +1,23 @@
 import styled, { css } from 'styled-components';
 import HeroImage from '../../img/Background.jpg';
 
+export const MainHeroContainer = styled.div`
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  z-index: 20;
+  margin-top: 0;
+  padding-top: 0;
+`;
+
 export const HeroContainer = styled.section`
   position: relative;
   height: 100vh;
   z-index: 10;
   margin-top: 0;
   padding-top: 0;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0% 100%);
-  filter: sepia(0.4);
+  /* clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0% 100%); */
+  /* filter: sepia(0.4); */
 
   &:before {
     content: '';
@@ -51,20 +60,23 @@ export const Overlay = styled.section`
 export const HeaderOne = styled.h1`
   position: relative;
   background: transparent;
-  max-width: 90%;
+  max-width: 80%;
   text-transform: capitalize;
   font-size: clamp(1.3rem, -0.875rem + 8vw, 2.5rem);
   font-weight: 800;
   text-align: center;
-  color: rgba(229, 241, 240, 0.965);
+  color: #ffffff;
   width: clamp(400px, 8vw -1rem, 500px);
 
   @media (max-width: 900px) {
     font-weight: 700;
-    color: rgba(229, 241, 240, 0.865);
-    width: 95%;
+    color: rgba(229, 241, 240, 0.965);
+    width: 90%;
     font-size: 1.6rem;
     margin-top: 2rem;
+  }
+  @media (max-width: 500px) {
+    width: 95%;
   }
 `;
 
@@ -73,15 +85,15 @@ export const Text = styled.p`
   font-size: clamp(0.9rem, -0.875rem + 4vw, 1.1rem);
   line-height: 1.7rem;
   text-align: center;
-  max-width: clamp(400px, 80vw, 75%);
+  width: clamp(400px, 70vw, 800px);
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.8);
 
   @media (max-width: 900px) {
     margin: 2rem auto 1.4rem;
     font-size: 1rem;
     line-height: 1.5rem;
-    max-width: 850%;
+    max-width: 85%;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.6);
   }
@@ -101,7 +113,11 @@ export const ButtonContainer = styled.section`
   flex-direction: row;
   background: none;
   @media (max-width: 900px) {
-    max-width: 60%;
+    max-width: 70%;
+  }
+
+  @media (max-width: 500px) {
+    max-width: 80%;
   }
 `;
 export const LinkGitHub = styled.a`
@@ -126,7 +142,9 @@ export const Button = styled.button`
   cursor: pointer;
   position: relative;
   border: none;
-  background: #fca311;
+  background: #f4743b;
+  transition: 0.3s all ease-in;
+
   & span {
     color: #e2eeeef8;
     font-size: 0.9rem;
@@ -139,28 +157,28 @@ export const Button = styled.button`
     color: #e2eeeef8;
   }
   &:hover {
-    color: #fca311;
-    border: 1px solid white;
-    background: transparent;
+    color: #e2eeeef8;
+
+    background: #f4743b99;
   }
 
   ${(props) =>
     props.primary &&
     css`
       background: transparent;
-      border: 1px solid #fca311;
+      border: 1px solid white;
       color: white;
 
       &:hover {
         color: white;
-        background: #fca311;
+        background: #f4743b;
+        border: 1px solid #f4743b;
       }
     `}
 
   @media (max-width: 900px) {
-    max-width: auto;
-    padding: 9px 0.5rem;
-    font-size: 0.8rem;
+    padding: 9px 0.3rem;
+    font-size: 0.7rem;
   }
 `;
 
@@ -172,10 +190,38 @@ export const DownArrow = styled.img`
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  z-index: 1000;
+  z-index: 20;
   cursor: pointer;
 
   @media (max-width: 900px) {
     display: none;
+  }
+`;
+
+export const CurveSvg = styled.section`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 1000;
+
+  & svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 10%;
+  }
+  & .main-stop {
+    stop-color: #031d44;
+  }
+  & .alt-stop {
+    stop-color: #382397;
+  }
+  & .shape-fill {
+    /* fill: url('#gradient'); */
+    fill: #3779d4;
   }
 `;
