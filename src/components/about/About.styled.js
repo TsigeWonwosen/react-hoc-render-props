@@ -10,15 +10,16 @@ export const Wrapper = styled.div`
   align-items: center;
   background-color: transparent;
   padding: 2rem;
-  margin: 1rem 0 4rem 0;
+  margin: 3rem 0 4rem 0;
   z-index: 10;
-
+  @media (max-width: 1100px) {
+    margin: 6rem 0 4rem 0;
+  }
   @media (max-width: 900px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 4rem;
-    margin: 3rem 0 4rem 0;
+    margin: 4rem 0 4rem 0;
     padding: 2rem 1rem;
   }
 `;

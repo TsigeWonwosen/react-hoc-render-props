@@ -6,8 +6,9 @@ export const MainHeroContainer = styled.div`
   height: 100vh;
   width: 100%;
   z-index: 20;
-  margin-top: 0;
-  padding-top: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 `;
 
 export const HeroContainer = styled.section`
@@ -16,6 +17,8 @@ export const HeroContainer = styled.section`
   z-index: 10;
   margin-top: 0;
   padding-top: 0;
+
+  /* border: 1px solid red; */
   /* clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0% 100%); */
   /* filter: sepia(0.4); */
 
@@ -203,6 +206,7 @@ export const CurveSvg = styled.section`
   bottom: 0;
   left: 0;
   width: 100%;
+  height: 90px;
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
@@ -211,8 +215,8 @@ export const CurveSvg = styled.section`
   & svg {
     position: relative;
     display: block;
+    height: 100%;
     width: calc(103% + 1.3px);
-    height: 10%;
   }
   & .main-stop {
     stop-color: #031d44;

@@ -55,10 +55,10 @@ function Head() {
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 119"
+          viewBox="0 0 1200 110"
           preserveAspectRatio="none"
         >
-          <linearGradient id="gradient" gradientTransform="rotate(0)">
+          <linearGradient id="gradient" gradientTransform="rotate(180)">
             <stop class="main-stop" offset="0%" />
             <stop class="alt-stop" offset="100%" />
           </linearGradient>

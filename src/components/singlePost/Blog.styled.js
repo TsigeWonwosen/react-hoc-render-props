@@ -18,6 +18,15 @@ export const Content = styled.section`
   margin: 7rem auto 2rem;
   border-radius: 15px;
   position: relative;
+
+  @media (max-width: 900px) {
+    width: 80%;
+    margin: 7rem auto 1rem;
+  }
+  @media (max-width: 500px) {
+    width: 90%;
+    margin: 9rem auto 0.3rem;
+  }
 `;
 
 export const ImageSingle = styled.img`
@@ -30,6 +39,10 @@ export const ImageSingle = styled.img`
   object-fit: cover;
   object-position: 20% 70%;
   border-radius: 15px 15px 0 0;
+
+  @media (max-width: 500px) {
+    height: 300px;
+  }
 `;
 
 export const BlogInfo = styled.section`
@@ -40,6 +53,11 @@ export const BlogInfo = styled.section`
   top: 334px;
   left: 0;
   background-color: rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 500px) {
+    top: 244px;
+    left: 0;
+  }
 `;
 
 export const Button = styled(Link)`
@@ -65,6 +83,11 @@ export const PublishAt = styled.h5`
   padding: 0.4rem 3rem 0.6rem;
   text-align: left;
   color: rgba(255, 255, 255, 0.7);
+
+  @media (max-width: 500px) {
+    font-size: 0.7rem;
+    padding: 0.3rem 3rem 0.4rem;
+  }
 `;
 
 export const Title = styled.h2`
@@ -74,6 +97,11 @@ export const Title = styled.h2`
   text-align: left;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.94);
+
+  @media (max-width: 500px) {
+    font-size: 1rem;
+    padding: 0.5rem 3rem 0.5rem;
+  }
 `;
 
 export const Body = styled.section`
@@ -84,18 +112,7 @@ export const Body = styled.section`
   font-weight: 300;
   line-height: 1.5;
 
-  & > ul > h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 1.3rem 0.1rem;
-    color: #000000;
-    font-size: 1.4rem;
-  }
-
-  & > ol > h1,
+  & h1,
   h2,
   h3,
   h4,
@@ -132,5 +149,18 @@ export const Body = styled.section`
   & > p > img {
     border-radius: 10px;
     margin: 1.5rem 0rem;
+  }
+
+  @media (max-width: 500px) {
+    & h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 1rem 0.1rem;
+      color: #00000099;
+      font-size: 0.9rem;
+    }
   }
 `;
