@@ -71,12 +71,7 @@ export const LogoName = styled.h3`
   letter-spacing: 1px;
   font-weight: bold;
   font-family: 'Karla', sans-serif;
-  background-image: linear-gradient(
-    to right,
-    green 0%,
-    hsl(49, 100%, 50%) 50%,
-    #e52e71 100%
-  );
+  background-image: linear-gradient(to right, white, #f4743b);
   text-shadow: none;
   background-clip: text;
   -webkit-background-clip: text;
@@ -85,7 +80,7 @@ export const LogoName = styled.h3`
   ${(props) =>
     props.move &&
     css`
-      animation: ${props.move} 4s;
+      animation: ${props.move} 10s;
       animation-iteration-count: infinite;
     `}
 `;
@@ -121,19 +116,19 @@ export const List = styled.li`
   background-color: transparent;
   text-decoration: none;
   list-style: none;
-  border-radius: ${({ contact }) => (contact ? '10px' : '')};
+  border-radius: ${({ contact }) => (contact ? '12px' : '')};
   outline: none;
   cursor: pointer;
   color: #f4f4f4f4;
-  border: 2px solid ${({ contact }) => (contact ? '#f4743b' : 'transparent')};
-  border-bottom: 2px solid
+  border: 3px solid ${({ contact }) => (contact ? '#f4743b' : 'transparent')};
+  border-bottom: 3px solid
     ${({ contact }) => (contact ? '#f4743b' : 'transparent')};
   font-size: 1.1rem;
   transition: all 0.3s ease-in-out;
 
   &:hover {
     color: ${({ contact }) => (contact ? '#f4f4f4' : '')};
-    border-bottom: 2px solid
+    border-bottom: 3px solid
       ${({ contact }) => (contact ? 'transparent' : '#f4743b')};
     background-color: ${({ contact }) => (contact ? '#f4743b' : '')};
   }
@@ -166,10 +161,11 @@ export const Logo = styled.div`
   transition: animation 0.5s ease-in-out;
   cursor: pointer;
   & span {
-    padding: 0;
-    margin: 0;
-    color: red !important;
-    font-size: 1.4rem;
+    display: inline;
+    font-size: 2rem;
+    & {
+      color: red;
+    }
   }
   @media (max-width: 900px) {
     max-width: 100%;
@@ -209,14 +205,14 @@ export const Image = styled.img`
 
 export const moveVertically = keyframes`
        0% {
-    background-image: linear-gradient(
-    ##f4743b;4,
-      #b4e52e 
+    background-image: linear-gradient(180deg,
+    ##f4743b,
+       #FFFF 
     );
   }
 
   100% {
-    background-image: linear-gradient(
+    background-image: linear-gradient(180deg,
      
       rgba(250, 200, 10,0.8) ,
       #FFFF 

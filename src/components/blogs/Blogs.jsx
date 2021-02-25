@@ -24,7 +24,7 @@ function Blogs({ featured }) {
           ))}
         </WrapperPosts>
       </CardContainer>
-      {featured && <Button to="blogs">All Blogs</Button>}
+      {featured && <Button to="blogs">See All Blogs</Button>}
     </ContainerPosts>
   );
 }

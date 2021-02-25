@@ -15,18 +15,20 @@ import {
 
 import { userContext } from '../../context/userContext';
 
+import { Loading } from '../../components';
+
 function Blog() {
   const { posts, error, loading } = useContext(userContext);
   let { id } = useParams();
 
   if (error) return <div>Error Loading</div>;
-  if (loading) return <div>Loading ...</div>;
+  if (loading) return <Loading />;
 
   const SinglePost = posts.filter((post) => post._id === id);
 
   console.log(SinglePost);
   if (SinglePost.length === 0) {
-    return <h2>Loading ....</h2>;
+    return <Loading />;
   }
   const {
     name,

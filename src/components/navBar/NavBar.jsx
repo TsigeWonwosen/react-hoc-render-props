@@ -17,15 +17,15 @@ import {
 
 const NavBar = () => {
   const [navBc, setNavBc] = useState(false);
-  const location = useLocation();
-
+  const { pathname, hash } = useLocation();
+ 
   useEffect(() => {
     async function handleScrollBar() {
       try {
-        if (window.scrollY >= 100) {
-          setNavBc(true);
+        if (pathname === '/' && window.scrollY < 100) {
+          setNavBc((prvState) => !prvState);
         } else {
-          setNavBc(false);
+          setNavBc(true);
         }
       } catch (e) {
         console.log(e);
@@ -37,7 +37,7 @@ const NavBar = () => {
     return () => {
       window.removeEventListener('scroll', handleScrollBar);
     };
-  }, [navBc, location]);
+  }, [navBc, pathname]);
 
   return (
     <WrapperContainer primary={navBc}>
@@ -55,7 +55,9 @@ const NavBar = () => {
               }
               move={moveVertically}
             >
-              Wonde<span>.</span>Shi
+              Wonde
+              <span style={{ color: 'red' }}>.</span>
+              Shi
             </LogoName>
           </Logo>
           <ListContainer>
@@ -63,7 +65,7 @@ const NavBar = () => {
               <LinkStyled
                 to="/"
                 exact
-                activeClassName={location.hash === '' ? 'active' : ''}
+                activeClassName={hash === '' ? 'active' : ''}
               >
                 Home
               </LinkStyled>
@@ -72,7 +74,7 @@ const NavBar = () => {
               <LinkStyled
                 to="/#about"
                 exact
-                activeClassName={location.hash === '#about' ? 'active' : ''}
+                activeClassName={hash === '#about' ? 'active' : ''}
               >
                 About
               </LinkStyled>
@@ -86,7 +88,7 @@ const NavBar = () => {
               <LinkStyled
                 to="/#project"
                 exact
-                activeClassName={location.hash === '#project' ? 'active' : ''}
+                activeClassName={hash === '#project' ? 'active' : ''}
               >
                 Projects
               </LinkStyled>

@@ -16,6 +16,7 @@ export const Content = styled.section`
   object-fit: cover;
   width: 100%;
   height: 100%;
+  background-position: 50% 0.2%;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
@@ -32,7 +33,8 @@ export const Content = styled.section`
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(39, 39, 95, 0.47);
+    background-color: rgba(39, 39, 95, 0.45);
+    background-blend-mode: overlay;
   }
 
   @media (max-width: 900px) {
@@ -64,9 +66,9 @@ export const Title = styled.h2`
   }
 `;
 export const Paragraph = styled.p`
-  max-width: 70%;
-  color: rgba(255, 255, 255, 0.7);
-  text-align: left;
+  max-width: 75%;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
   font-size: 1.4rem;
   line-height: 1.7rem;
   z-index: 20;
@@ -79,12 +81,11 @@ export const Paragraph = styled.p`
 `;
 
 export const Line = styled.div`
-  z-index: 20;
-  margin: 0.3rem auto 2.4rem;
+  margin: 2rem auto 2rem;
   padding: 0;
   height: 0.4rem;
-  background-color: #fdfdfd;
-  width: 150px;
+  background-color: #f4743b;
+  width: 100px;
   text-align: center;
   border-radius: 15px;
 `;

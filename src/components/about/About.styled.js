@@ -66,12 +66,12 @@ export const Title = styled.h2`
   letter-spacing: 2px;
   text-align: center;
   text-transform: capitalize;
-  color: rgba(255, 255, 255, 0.9);
+  color: #0b7cfa;
 `;
 export const Paragraph = styled.p`
   max-width: clamp(600px, 8vw + 10px, 700px);
   font-size: clamp(0.9rem, -0.875rem + 8vw, 1rem);
-  color: rgba(255, 255, 255, 0.6);
+  color: #383f41;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.9rem;
   text-align: left;
@@ -81,8 +81,8 @@ export const Line = styled.div`
   margin: 2rem auto 2rem;
   padding: 0;
   height: 0.4rem;
-  background-color: rgba(255, 255, 252, 0.96);
-  width: 150px;
+  background-color: #f4743b;
+  width: 100px;
   text-align: center;
   border-radius: 15px;
 `;

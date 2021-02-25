@@ -7,7 +7,7 @@ export const ContainerPosts = styled.section`
   flex-direction: column;
   align-items: center;
   text-align: left;
-  margin-top: ${({ featured }) => (!featured ? '4rem' : '2rem')};
+  margin-top: ${({ featured }) => (!featured ? '6rem' : '3rem')};
   margin-bottom: ${({ featured }) => (!featured ? '4rem' : '0.1rem')};
   background-image: radial-gradient(90deg, #5c0067 0%, #00d4ff 100%);
 
@@ -57,7 +57,7 @@ export const Title = styled.h2`
   flex-direction: row;
   justify-content: center;
   width: auto;
-  color: #fdfdfd;
+  color: #0b7cfa;
   letter-spacing: 2px;
   text-transform: capitalize;
   font-size: 3.2rem;
@@ -76,8 +76,8 @@ export const Line = styled.div`
   margin: 2rem auto 2rem;
   padding: 0;
   height: 0.4rem;
-  background-color: rgba(255, 255, 252, 0.8);
-  width: 150px;
+  background-color: #f4743b;
+  width: 100px;
   text-align: center;
   border-radius: 15px;
 
@@ -87,18 +87,21 @@ export const Line = styled.div`
 `;
 
 export const Button = styled(Link)`
-  max-width: 100px;
-  padding: 10px 14px;
-  margin: 1rem 0rem 4rem;
+  max-width: 150px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding: 10px 1.5rem;
+  margin: 1rem auto 4rem;
   background-color: transparent;
-  border: 1px solid #fca311;
-  color: #fca311;
-  border-radius: 10px;
+  border: 3px solid #f4743b;
+  color: #f4743b;
+  border-radius: 12px;
   transition: all 0.3s ease-in-out;
 
   &:hover {
     color: white;
-    background-color: #fca311;
+    background-color: #f4743b;
   }
 
   @media (max-width: 900px) {

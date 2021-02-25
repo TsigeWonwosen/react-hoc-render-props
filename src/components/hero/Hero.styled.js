@@ -18,10 +18,6 @@ export const HeroContainer = styled.section`
   margin-top: 0;
   padding-top: 0;
 
-  /* border: 1px solid red; */
-  /* clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0% 100%); */
-  /* filter: sepia(0.4); */
-
   &:before {
     content: '';
     position: absolute;
@@ -29,11 +25,12 @@ export const HeroContainer = styled.section`
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
-    background-image: url(${HeroImage});
+    background-image: url(${HeroImage}),
+      linear-gradient(90deg, #0051c7, #322b6c);
     background-position: bottom center;
     background-size: cover;
     object-fit: cover;
+    background-blend-mode: multiply;
     background-repeat: 'no-repeat';
   }
 
@@ -109,14 +106,14 @@ export const ButtonContainer = styled.section`
   position: relative;
   height: 2rem;
   margin-top: 2rem;
-  max-width: 400px;
+  max-width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   background: none;
   @media (max-width: 900px) {
-    max-width: 70%;
+    max-width: 60%;
   }
 
   @media (max-width: 500px) {
@@ -135,8 +132,8 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 40px;
+  width: 250px;
+  height: 45px;
   padding: 0 1rem;
   margin: 1rem;
   border-radius: 12px;
@@ -146,41 +143,51 @@ export const Button = styled.button`
   position: relative;
   border: none;
   background: #f4743b;
-  transition: 0.3s all ease-in;
-
+  transition: 0.3s all ease-in-out;
   & span {
     color: #e2eeeef8;
     font-size: 0.9rem;
     margin-right: 0.7rem;
   }
+
   & svg {
     font-size: 0.5rem;
     height: 20px;
     width: 20px;
     color: #e2eeeef8;
   }
+
   &:hover {
     color: #e2eeeef8;
-
-    background: #f4743b99;
+    background: #f37944da;
   }
 
   ${(props) =>
     props.primary &&
     css`
       background: transparent;
-      border: 1px solid white;
-      color: white;
+      border: 2px solid #f4743b;
 
+      & span {
+        color: #f4743b;
+      }
+      & svg {
+        color: #f4743b;
+      }
       &:hover {
         color: white;
         background: #f4743b;
         border: 1px solid #f4743b;
+        & span {
+          color: #e2eeeef8;
+        }
+        & svg {
+          color: #e2eeeef8;
+        }
       }
     `}
 
   @media (max-width: 900px) {
-    padding: 9px 0.3rem;
     font-size: 0.7rem;
   }
 `;
@@ -218,14 +225,16 @@ export const CurveSvg = styled.section`
     height: 100%;
     width: calc(103% + 1.3px);
   }
+
   & .main-stop {
     stop-color: #031d44;
   }
+
   & .alt-stop {
     stop-color: #382397;
   }
   & .shape-fill {
     /* fill: url('#gradient'); */
-    fill: #3779d4;
+    fill: #f8f8f8;
   }
 `;

@@ -12,10 +12,10 @@ export const Content = styled.section`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
   width: 70%;
   color: blue;
-  margin: 7rem auto 2rem;
+  margin: 7rem auto 1rem;
   border-radius: 15px;
   position: relative;
 
@@ -61,19 +61,19 @@ export const BlogInfo = styled.section`
 `;
 
 export const Button = styled(Link)`
-  padding: 7px 1.5rem;
+  padding: 9px 1.5rem;
   border-radius: 5px;
   margin: 2.7rem 3rem 1rem;
   font-size: 1rem;
   text-decoration: none;
   width: auto;
-  border: 1px solid #fca311;
-  color: #fca311;
+  border: 2px solid #f4743b;
+  color: #f4743b;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 
   &:hover {
-    background: #fca311;
+    background: #f4743b;
     color: white;
   }
 `;

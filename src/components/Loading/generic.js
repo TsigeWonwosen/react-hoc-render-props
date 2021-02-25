@@ -7,11 +7,11 @@ export const Section = styled.div`
   align-items: center;
   width: 100%;
   height: 300px;
-  color: #fff;
+  color: #0b7cfa;
 `;
 
 export const Prop = styled.h3`
-  color: white;
+  color: #0b7cfa;
   font-size: 1.3rem;
   text-align: center;
   width: auto;
