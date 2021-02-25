@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link as NewLink, animateScroll as scroll } from 'react-scroll';
+import { useLocation } from 'react-router-dom';
+import { animateScroll as scroll } from 'react-scroll';
 import {
   WrapperContainer,
   Container,
@@ -16,11 +17,12 @@ import {
 
 const NavBar = () => {
   const [navBc, setNavBc] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     async function handleScrollBar() {
       try {
-        if (window.scrollY >= 130) {
+        if (window.scrollY >= 100) {
           setNavBc(true);
         } else {
           setNavBc(false);
@@ -35,7 +37,7 @@ const NavBar = () => {
     return () => {
       window.removeEventListener('scroll', handleScrollBar);
     };
-  }, [navBc]);
+  }, [navBc, location]);
 
   return (
     <WrapperContainer primary={navBc}>
@@ -58,40 +60,46 @@ const NavBar = () => {
           </Logo>
           <ListContainer>
             <List>
-              <LinkStyled to="/">Home</LinkStyled>
+              <LinkStyled
+                to="/"
+                exact
+                activeClassName={location.hash === '' ? 'active' : ''}
+              >
+                Home
+              </LinkStyled>
             </List>
             <List>
-              <NewLink
-                to="about"
-                smooth={true}
-                duration={2000}
-                spy={true}
-                delay={100}
-                offset={-100}
+              <LinkStyled
+                to="/#about"
+                exact
+                activeClassName={location.hash === '#about' ? 'active' : ''}
               >
                 About
-              </NewLink>
+              </LinkStyled>
             </List>
             <List>
-              <LinkStyled to="/blogs">Blogs</LinkStyled>
+              <LinkStyled to="/blogs" exact activeClassName="active">
+                Blogs
+              </LinkStyled>
             </List>
             <List>
-              <NewLink
-                to="project"
-                smooth={true}
-                duration={2000}
-                spy={true}
-                delay={100}
-                offset={-40}
+              <LinkStyled
+                to="/#project"
+                exact
+                activeClassName={location.hash === '#project' ? 'active' : ''}
               >
                 Projects
-              </NewLink>
+              </LinkStyled>
             </List>
             <List contact={true}>
-              <LinkStyled to="/contact">Contact</LinkStyled>
+              <LinkStyled to="/contact" exact activeClassName="active">
+                Contact
+              </LinkStyled>
             </List>
             <List>
-              <LinkStyled to="/login">Login</LinkStyled>
+              <LinkStyled to="/login" activeClassName="active">
+                Login
+              </LinkStyled>
             </List>
           </ListContainer>
           <Flag>

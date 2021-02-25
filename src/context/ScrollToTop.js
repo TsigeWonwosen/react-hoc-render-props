@@ -1,15 +1,17 @@
 import { useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 
-function ScrollToTop({ history }) {
+function ScrollToTop({ location }) {
   useEffect(() => {
-    const unListen = history.listen(() => {
-      window.scrollTo(0, 20);
-    });
-    return () => {
-      unListen();
-    };
-  }, [history]);
+    if (location.hash) {
+      let elem = document.getElementById(location.hash.slice(1));
+      if (elem) {
+        elem.scrollIntoView({ behavior: 'smooth', duration: 2000 });
+      }
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
+  }, [location]);
 
   return null;
 }

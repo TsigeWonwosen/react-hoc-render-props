@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink as Link } from 'react-router-dom';
 
 export const WrapperContainer = styled.div`
   height: 90px;
@@ -61,6 +61,7 @@ export const Content = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+
   @media (max-width: 900px) {
     flex-direction: column;
     height: 110px;
@@ -136,6 +137,21 @@ export const List = styled.li`
       ${({ contact }) => (contact ? 'transparent' : '#f4743b')};
     background-color: ${({ contact }) => (contact ? '#f4743b' : '')};
   }
+  & a {
+    padding: 0;
+    margin: 0 0 -3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    outline: none;
+    height: 101%;
+    border-bottom: 3px solid transparent;
+  }
+  & a.active {
+    border-bottom: 3px solid #f4743b;
+  }
 `;
 
 export const Logo = styled.div`
@@ -194,7 +210,7 @@ export const Image = styled.img`
 export const moveVertically = keyframes`
        0% {
     background-image: linear-gradient(
-    #F4f4f4,
+    ##f4743b;4,
       #b4e52e 
     );
   }
