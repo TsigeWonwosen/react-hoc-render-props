@@ -32,7 +32,7 @@ export const Card = styled.article`
   }
 
   @media (max-width: 300px) {
-    height: 340px;
+    height: 350px;
   }
 
   &:hover {
@@ -97,6 +97,9 @@ export const ArticleInfo = styled.span`
   @media (max-width: 700px) {
     flex-direction: column;
     align-items: flex-start;
+  }
+  @media (max-width: 320px) {
+    display: none;
   }
 `;
 
@@ -175,13 +178,12 @@ export const PostBody = styled.h6`
   }
   @media (max-width: 500px) {
     margin-top: 0.3rem;
-
     font-size: 0.7rem;
   }
 
   @media (max-width: 300px) {
     font-size: 0.6rem;
-    line-height: 1.3rem;
+    line-height: 1.1rem;
   }
 `;
 

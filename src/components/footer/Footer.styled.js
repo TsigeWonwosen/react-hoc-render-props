@@ -16,6 +16,13 @@ export const FooterWrapper = styled.div`
   gap: 0.4rem;
   justify-items: center;
   clip-path: polygon(0 3%, 100% 0.7%, 100% 100%, 0 100%);
+
+  @media (max-width: 600px) {
+    clip-path: polygon(0 1.5%, 100% 0.7%, 100% 100%, 0 100%);
+  }
+  @media (max-width: 400px) {
+    clip-path: polygon(0 1%, 100% 0.5%, 100% 100%, 0 100%);
+  }
 `;
 
 export const Grid = styled.div`

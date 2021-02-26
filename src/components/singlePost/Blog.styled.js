@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
-  min-height: 90vh;
-  width: 100vw;
-  margin: 5rem auto 5rem;
+  min-height: 100vh;
+  width: 100%;
+  margin: 5rem auto;
 `;
 
 export const Content = styled.section`
@@ -19,13 +19,21 @@ export const Content = styled.section`
   border-radius: 15px;
   position: relative;
 
+  @media (max-width: 1240px) {
+    width: 85%;
+    margin: 9rem auto 1rem;
+  }
   @media (max-width: 900px) {
     width: 80%;
-    margin: 7rem auto 1rem;
+    margin: 9rem auto 1rem;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
     width: 90%;
     margin: 9rem auto 0.3rem;
+  }
+  @media (max-width: 400px) {
+    width: 100%;
+    margin: 6rem auto 1rem;
   }
 `;
 
@@ -43,6 +51,9 @@ export const ImageSingle = styled.img`
   @media (max-width: 500px) {
     height: 300px;
   }
+  @media (max-width: 400px) {
+    height: 270px;
+  }
 `;
 
 export const BlogInfo = styled.section`
@@ -54,8 +65,25 @@ export const BlogInfo = styled.section`
   left: 0;
   background-color: rgba(0, 0, 0, 0.1);
 
+  @media (max-width: 900px) {
+    top: 342px;
+    left: 0;
+  }
+  @media (max-width: 700px) {
+    top: 360px;
+    left: 0;
+  }
   @media (max-width: 500px) {
-    top: 244px;
+    top: 228px;
+    left: 0;
+  }
+
+  @media (max-width: 400px) {
+    top: 185px;
+    left: 0;
+  }
+  @media (max-width: 300px) {
+    top: 205px;
     left: 0;
   }
 `;
@@ -84,9 +112,13 @@ export const PublishAt = styled.h5`
   text-align: left;
   color: rgba(255, 255, 255, 0.7);
 
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
     font-size: 0.7rem;
     padding: 0.3rem 3rem 0.4rem;
+  }
+  @media (max-width: 400px) {
+    font-size: 0.6rem;
+    padding: 0.2rem 0 0.2rem 3rem;
   }
 `;
 
@@ -98,9 +130,23 @@ export const Title = styled.h2`
   font-weight: 700;
   color: rgba(255, 255, 255, 0.94);
 
-  @media (max-width: 500px) {
+  @media (max-width: 950px) {
     font-size: 1rem;
     padding: 0.5rem 3rem 0.5rem;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 1rem;
+    padding: 0.5rem 3rem 0.5rem;
+  }
+  @media (max-width: 400px) {
+    font-size: 0.8rem;
+    padding: 0.5rem 3rem 0.5rem;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 0.7rem;
+    padding: 0.3rem 0 0.5rem 3rem;
   }
 `;
 

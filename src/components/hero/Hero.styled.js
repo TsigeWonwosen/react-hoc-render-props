@@ -13,7 +13,7 @@ export const MainHeroContainer = styled.div`
 
 export const HeroContainer = styled.section`
   position: relative;
-  height: 100vh;
+  height: 99.7vh;
   z-index: 10;
   margin-top: 0;
   padding-top: 0;
@@ -116,8 +116,14 @@ export const ButtonContainer = styled.section`
     max-width: 60%;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     max-width: 80%;
+  }
+  @media (max-width: 400px) {
+    max-width: 90%;
+  }
+  @media (max-width: 300px) {
+    max-width: 100%;
   }
 `;
 export const LinkGitHub = styled.a`
@@ -189,6 +195,17 @@ export const Button = styled.button`
 
   @media (max-width: 900px) {
     font-size: 0.7rem;
+  }
+
+  @media (max-width: 430px) {
+    font-size: 0.6rem;
+    padding: 0 0.4rem;
+    margin: 0.7rem;
+  }
+  @media (max-width: 430px) {
+    font-size: 0.6rem;
+    padding: 0 0.3rem;
+    margin: 0.5rem;
   }
 `;
 

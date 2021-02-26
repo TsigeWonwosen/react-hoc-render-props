@@ -81,6 +81,12 @@ export const HeaderTitle = styled.h2`
   cursor: pointer;
   text-transform: capitalize;
   color: #0859cf;
+  background: linear-gradient(45deg, #0859cf, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  background-clip: text;
 `;
 
 export const Author = styled.div`
@@ -108,7 +114,6 @@ export const AuthorName = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   letter-spacing: 1px;
   text-transform: capitalize;
   color: #0859cf;
@@ -118,7 +123,7 @@ export const Prefix = styled.div`
   background-color: transparent;
   margin: 0.25rem 0 auto;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: '#0859CF';
 `;
 
@@ -126,20 +131,24 @@ export const Name = styled.span`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   letter-spacing: 1px;
   text-transform: capitalize;
   color: #0859cf;
 `;
 
 export const Tags = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 1rem 0 2rem;
-  padding: 0.5rem 0 1rem;
+  padding: 0.5rem 0 0.5rem;
   line-height: 2;
   margin-bottom: 0;
   background-color: transparent;
-  border: 1px solid rgba(22, 32, 77, 0.4);
+  border: 1px solid rgba(22, 32, 77, 0.2);
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.24);
+  box-shadow: -2px 4px 1rem rgba(255, 255, 255, 0.24);
 `;
 
 export const Link = styled.a`
@@ -147,11 +156,12 @@ export const Link = styled.a`
   font-weight: 700;
   font-size: 0.5rem;
   color: #7a7a8c;
+  width: auto;
   text-transform: uppercase;
   font-size: 0.66rem;
   border: 2px solid #421d839f;
   border-radius: 2rem;
-  padding: 0.2rem 0.85rem 0.25rem;
+  padding: 0.2rem 0.7rem 0.2rem;
   position: relative;
 
   &:hover {

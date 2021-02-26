@@ -62,6 +62,13 @@ export const Title = styled.h2`
     margin-top: 1rem;
     font-size: 2.3rem;
   }
+
+  @media (max-width: 400px) {
+    letter-spacing: 0.3px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+  }
 `;
 
 export const Line = styled.div`
