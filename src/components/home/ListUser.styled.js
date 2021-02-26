@@ -27,7 +27,7 @@ export const Card = styled.article`
   }
 
   @media (max-width: 700px) {
-    height: 270px;
+    height: 290px;
   }
   &:hover {
     opacity: 1;
@@ -123,7 +123,7 @@ export const BodyContainer = styled.section`
 `;
 
 export const Body = styled.div`
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -132,7 +132,7 @@ export const Body = styled.div`
   margin-top: 0.5rem;
 
   @media (max-width: 700px) {
-    padding: 0.5rem 1rem;
+    padding: 1.5rem 0.7rem;
   }
 `;
 
@@ -181,6 +181,7 @@ export const Tags = styled.div`
 
   @media (max-width: 700px) {
     height: 13%;
+    width: 80%;
   }
 `;
 export const LinkTo = styled(Link)`
@@ -192,18 +193,26 @@ export const LinkTo = styled(Link)`
   font-size: 0.8rem;
   height: 100%;
   color: #cfcfe0;
+  margin-top: 1rem;
   text-transform: capitalize;
+  letter-spacing: 1px;
   border: 1px solid #cfcfe0;
   border-radius: 0 0 12px;
   position: relative;
   max-width: 40%;
   transition: hover 0.3s ease-in-out;
+
   & span {
     color: #cfcfe0;
     margin-left: 1rem;
   }
+
   &:hover {
-    border: 1px solid #39ef74;
-    background: linear-gradient(90deg, #39ef74, #4600f1 100%);
+    border: 1px solid #f4743b;
+    background: linear-gradient(90deg, #f4743b, #4600f1);
+  }
+
+  @media (max-width: 700px) {
+    max-width: 70%;
   }
 `;

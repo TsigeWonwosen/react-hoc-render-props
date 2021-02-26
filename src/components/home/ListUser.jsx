@@ -18,7 +18,7 @@ import {
 function ListUser({ title, body, _id, email, image: { url }, createdAt }) {
   let date = new window.Date(createdAt);
   date = moment(date).format('MMM-Do-YYYY');
-  let TextBody = body.length > 100 ? body.substr(0, 200) + ' ...' : body;
+  let TextBody = body.length > 180 ? body.substr(0, 180) + ' . . .' : body;
   return (
     <Card>
       <BodyContainer>
