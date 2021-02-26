@@ -21,8 +21,9 @@ export const Card = styled.article`
   overflow: hidden;
   opacity: 0.8;
 
-  @media (max-width: 900px) {
+  @media (max-width: 950px) {
     width: 90%;
+    height: 230px;
     margin: 0 auto;
   }
 
@@ -131,6 +132,9 @@ export const Body = styled.div`
   align-items: flex-start;
   margin-top: 0.5rem;
 
+  @media (max-width: 980px) {
+    padding: 1.5rem 1rem;
+  }
   @media (max-width: 700px) {
     padding: 1.5rem 0.7rem;
   }
@@ -142,6 +146,9 @@ export const Title = styled.h4`
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.896);
 
+  @media (max-width: 980px) {
+    font-size: 1.2rem;
+  }
   @media (max-width: 700px) {
     font-size: 1.1rem;
   }
@@ -152,6 +159,11 @@ export const PostBody = styled.h6`
   line-height: 1.6rem;
   color: rgba(255, 255, 255, 0.721);
 
+  @media (max-width: 980px) {
+    margin-top: 0.4rem;
+
+    font-size: 0.8rem;
+  }
   @media (max-width: 500px) {
     margin-top: 0.3rem;
 
@@ -212,6 +224,9 @@ export const LinkTo = styled(Link)`
     background: linear-gradient(90deg, #f4743b, #4600f1);
   }
 
+  @media (max-width: 980px) {
+    max-width: 60%;
+  }
   @media (max-width: 700px) {
     max-width: 70%;
   }
