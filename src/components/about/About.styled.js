@@ -12,6 +12,8 @@ export const Wrapper = styled.div`
   padding: 2rem;
   margin: 3rem 0 4rem 0;
   z-index: 10;
+  clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+
   @media (max-width: 1100px) {
     margin: 6rem 0 4rem 0;
   }

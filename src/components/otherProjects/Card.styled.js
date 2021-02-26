@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 export const CardContainer = styled.div`
   margin: 0 0;
-  padding: 3rem 1rem 3rem;
+  margin-bottom: -5px;
+  padding: 6rem 1rem 3rem;
   box-sizing: border-box;
   color: white;
   font-family: 'DM Mono', monospace;
-  background-color: #0A1128;
+  background: linear-gradient(90deg, #3296f3, #0652c7);
+  clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
 `;
 
 export const Title = styled.h2`
@@ -23,8 +25,8 @@ export const Line = styled.div`
   margin: 2rem auto 2rem;
   padding: 0;
   height: 0.4rem;
-  background-color: rgba(165, 167, 182, 0.96);
-  width: 150px;
+  background-color: #f4743b;
+  width: 100px;
   text-align: center;
   border-radius: 15px;
 `;
@@ -45,7 +47,7 @@ export const Card = styled.span`
   min-width: 300px;
   padding: 1.5rem;
   border-radius: 16px;
-  background: #2d0e6bf6;
+  background: linear-gradient(90deg, #4592f4, white, #0b1a3711);
   box-shadow: -1rem 0 3rem #000;
   transition: 0.2s;
 
@@ -70,7 +72,7 @@ export const CardHeader = styled.header`
 export const Date = styled.span`
   font-size: 14px;
   margin: 0 0 1rem;
-  color: #7a7a8c;
+  color: #0859cf;
 `;
 
 export const HeaderTitle = styled.h2`
@@ -78,6 +80,7 @@ export const HeaderTitle = styled.h2`
   margin: 0.25rem 0 auto;
   cursor: pointer;
   text-transform: capitalize;
+  color: #0859cf;
 `;
 
 export const Author = styled.div`
@@ -108,7 +111,7 @@ export const AuthorName = styled.div`
   align-items: center;
   letter-spacing: 1px;
   text-transform: capitalize;
-  color: #86869b;
+  color: #0859cf;
 `;
 
 export const Prefix = styled.div`
@@ -116,7 +119,7 @@ export const Prefix = styled.div`
   margin: 0.25rem 0 auto;
   cursor: pointer;
   font-size: 1rem;
-  color: '#7a7a8c';
+  color: '#0859CF';
 `;
 
 export const Name = styled.span`
@@ -126,7 +129,7 @@ export const Name = styled.span`
   align-items: center;
   letter-spacing: 1px;
   text-transform: capitalize;
-  color: #86869b;
+  color: #0859cf;
 `;
 
 export const Tags = styled.div`
@@ -146,7 +149,7 @@ export const Link = styled.a`
   color: #7a7a8c;
   text-transform: uppercase;
   font-size: 0.66rem;
-  border: 3px solid #421d839f;
+  border: 2px solid #421d839f;
   border-radius: 2rem;
   padding: 0.2rem 0.85rem 0.25rem;
   position: relative;

@@ -7,6 +7,8 @@ export const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
   margin: 2rem 0rem 0rem;
+  clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+
   @media (max-width: 900px) {
     margin: 1rem 0rem 2rem;
   }

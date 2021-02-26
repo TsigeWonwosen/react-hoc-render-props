@@ -5,7 +5,7 @@ export const Card = styled.article`
   position: relative;
   display: flex;
   position: relative;
-  height: 200px;
+  height: 220px;
   max-width: 1000px;
   width: 90%;
   border-radius: 5px;
@@ -23,13 +23,18 @@ export const Card = styled.article`
 
   @media (max-width: 950px) {
     width: 90%;
-    height: 230px;
+    height: 250px;
     margin: 0 auto;
   }
 
   @media (max-width: 700px) {
     height: 290px;
   }
+
+  @media (max-width: 300px) {
+    height: 340px;
+  }
+
   &:hover {
     opacity: 1;
     transform: translateY(-10px);
@@ -124,7 +129,7 @@ export const BodyContainer = styled.section`
 `;
 
 export const Body = styled.div`
-  padding: 1rem 2rem;
+  padding: 1.4rem 2rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -152,6 +157,10 @@ export const Title = styled.h4`
   @media (max-width: 700px) {
     font-size: 1.1rem;
   }
+
+  @media (max-width: 300px) {
+    font-size: 0.8rem;
+  }
 `;
 export const PostBody = styled.h6`
   font-size: 0.87rem;
@@ -168,6 +177,11 @@ export const PostBody = styled.h6`
     margin-top: 0.3rem;
 
     font-size: 0.7rem;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 0.6rem;
+    line-height: 1.3rem;
   }
 `;
 
@@ -190,10 +204,14 @@ export const Tags = styled.div`
     background-clip: text;
     border-color: rgb(75, 228, 233);
   }
-
-  @media (max-width: 700px) {
+  @media (max-width: 900px) {
     height: 13%;
-    width: 80%;
+    width: 75%;
+  }
+
+  @media (max-width: 400px) {
+    height: 10%;
+    width: 100%;
   }
 `;
 export const LinkTo = styled(Link)`
@@ -211,7 +229,7 @@ export const LinkTo = styled(Link)`
   border: 1px solid #cfcfe0;
   border-radius: 0 0 12px;
   position: relative;
-  max-width: 40%;
+  max-width: 45%;
   transition: hover 0.3s ease-in-out;
 
   & span {
@@ -225,9 +243,18 @@ export const LinkTo = styled(Link)`
   }
 
   @media (max-width: 980px) {
-    max-width: 60%;
+    max-width: 55%;
   }
   @media (max-width: 700px) {
+    max-width: 60%;
+  }
+  @media (max-width: 500px) {
+    max-width: 65%;
+  }
+  @media (max-width: 400px) {
     max-width: 70%;
+  }
+  @media (max-width: 300px) {
+    max-width: 90%;
   }
 `;
