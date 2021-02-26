@@ -7,7 +7,7 @@ export const ContainerPosts = styled.section`
   flex-direction: column;
   align-items: center;
   text-align: left;
-  margin-top: ${({ featured }) => (!featured ? '6rem' : '3rem')};
+  margin-top: ${({ featured }) => (!featured ? '6rem' : '4rem')};
   margin-bottom: ${({ featured }) => (!featured ? '4rem' : '0.1rem')};
   background-image: radial-gradient(90deg, #5c0067 0%, #00d4ff 100%);
 
@@ -26,30 +26,22 @@ export const WrapperPosts = styled.section`
   margin: 0 auto;
   border-bottom: box-sizing;
   background-color: transparent;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
+  gap: 2rem;
   padding: 3rem 1rem;
 
   overflow-x: hidden;
 
   @media (max-width: 900px) {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(80%, 1fr));
     gap: 2.3rem 0;
     padding: 0rem;
     margin: 0;
     outline: none;
   }
   @media (max-width: 500px) {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
   }
-`;
-
-export const CardContainer = styled.div`
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: white;
-  font-family: 'DM Mono', monospace;
 `;
 
 export const Title = styled.h2`
@@ -88,9 +80,9 @@ export const Line = styled.div`
 
 export const Button = styled(Link)`
   max-width: 150px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 1.5rem;
   margin: 1rem auto 4rem;
   background-color: transparent;

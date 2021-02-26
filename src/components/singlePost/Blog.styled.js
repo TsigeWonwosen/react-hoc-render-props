@@ -50,7 +50,7 @@ export const BlogInfo = styled.section`
   flex-direction: column;
   align-items: flex-start;
   position: absolute;
-  top: 334px;
+  top: 360px;
   left: 0;
   background-color: rgba(0, 0, 0, 0.1);
 
@@ -63,7 +63,7 @@ export const BlogInfo = styled.section`
 export const Button = styled(Link)`
   padding: 9px 1.5rem;
   border-radius: 5px;
-  margin: 2.7rem 3rem 1rem;
+  margin: 2rem 3rem 0.5rem;
   font-size: 1rem;
   text-decoration: none;
   width: auto;
@@ -79,7 +79,7 @@ export const Button = styled(Link)`
 `;
 export const PublishAt = styled.h5`
   width: auto;
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 0.4rem 3rem 0.6rem;
   text-align: left;
   color: rgba(255, 255, 255, 0.7);
@@ -106,9 +106,8 @@ export const Title = styled.h2`
 
 export const Body = styled.section`
   font-size: 1rem;
-  padding: 1rem 3rem;
-  color: #848c8e;
-  margin: 1rem 0 3rem;
+  padding: 0.5rem 3rem;
+  margin: 0.5rem 0 3rem;
   font-weight: 300;
   line-height: 1.5;
 
@@ -118,19 +117,13 @@ export const Body = styled.section`
   h4,
   h5,
   h6 {
-    margin: 1.3rem 0.1rem;
-    color: #000000;
+    margin: 1rem 0.1rem;
+    color: #442333;
     font-size: 1.4rem;
   }
-  & > ol > li > p {
+  & p {
     margin: 1.2rem 0rem;
-    font-size: 0.8rem;
-    color: #1f0709;
-  }
-
-  & > p {
-    margin: 1.2rem 0rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #1f0709;
   }
 
@@ -146,7 +139,7 @@ export const Body = styled.section`
     font-size: 1.6rem;
   }
 
-  & > p > img {
+  & p img {
     border-radius: 10px;
     margin: 1.5rem 0rem;
   }

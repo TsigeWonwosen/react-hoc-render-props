@@ -3,7 +3,13 @@ import React, { useContext } from 'react';
 import { userContext } from '../../context/userContext';
 import ListUser from '../home/ListUser';
 import { PageForm, Loading } from '../../components';
-import {ContainerPosts,Title,Line,CardContainer,WrapperPosts,Button } from './Blogs.styled'
+import {
+  ContainerPosts,
+  Title,
+  Line,
+  WrapperPosts,
+  Button,
+} from './Blogs.styled';
 
 function Blogs({ featured }) {
   const { posts, error, loading } = useContext(userContext);
@@ -17,17 +23,14 @@ function Blogs({ featured }) {
       <Title id="posts">{featured ? 'Featured Blogs' : 'All Blogs'}</Title>
       <Line />
       {!featured && <PageForm posts={posts} />}
-      <CardContainer>
-        <WrapperPosts>
-          {Posts.map((post) => (
-            <ListUser key={post._id} {...post} />
-          ))}
-        </WrapperPosts>
-      </CardContainer>
+      <WrapperPosts>
+        {Posts.map((post) => (
+          <ListUser key={post._id} {...post} />
+        ))}
+      </WrapperPosts>
       {featured && <Button to="blogs">See All Blogs</Button>}
     </ContainerPosts>
   );
 }
 
 export default Blogs;
-

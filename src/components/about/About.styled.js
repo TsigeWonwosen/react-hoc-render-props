@@ -71,7 +71,7 @@ export const Title = styled.h2`
 export const Paragraph = styled.p`
   max-width: clamp(600px, 8vw + 10px, 700px);
   font-size: clamp(0.9rem, -0.875rem + 8vw, 1rem);
-  color: #383f41;
+  color: #2f2e41;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.9rem;
   text-align: left;
