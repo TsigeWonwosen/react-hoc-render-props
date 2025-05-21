@@ -1,7 +1,5 @@
-import React from 'react';
-
-import styled from 'styled-components';
-import { Head, About, Service, Card, Blogs } from '../../components';
+import styled from "styled-components";
+import { Head, About, Service, Card, Blogs } from "../../components";
 
 function Home() {
   return (

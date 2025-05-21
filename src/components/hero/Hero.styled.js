@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import HeroImage from '../../img/Background.jpg';
+import styled, { css } from "styled-components";
+import HeroImage from "../../img/background.jpg";
 
 export const MainHeroContainer = styled.div`
   position: relative;
@@ -19,7 +19,7 @@ export const HeroContainer = styled.section`
   padding-top: 0;
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0px;
     left: 0px;
@@ -31,7 +31,7 @@ export const HeroContainer = styled.section`
     background-size: cover;
     object-fit: cover;
     background-blend-mode: multiply;
-    background-repeat: 'no-repeat';
+    background-repeat: "no-repeat";
   }
 
   @media (max-width: 900px) {

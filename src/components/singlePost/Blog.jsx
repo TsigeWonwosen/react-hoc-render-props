@@ -1,7 +1,9 @@
-import React, { useContext } from 'react';
-import ReactMarkdown from 'react-markdown';
-import { useParams } from 'react-router-dom';
-import moment from 'moment';
+import { useContext } from "react";
+import ReactMarkdown from "react-markdown";
+import { useParams } from "react-router-dom";
+import moment from "moment";
+import sampleImage from "../../img/screen-post-.jpg";
+
 import {
   Wrapper,
   Content,
@@ -11,11 +13,11 @@ import {
   PublishAt,
   Title,
   BlogInfo,
-} from './Blog.styled';
+} from "./Blog.styled";
 
-import { userContext } from '../../context/userContext';
+import { userContext } from "../../context/userContext";
 
-import { Loading } from '../../components';
+import { Loading } from "../../components";
 
 function Blog() {
   const { posts, error, loading } = useContext(userContext);
@@ -24,30 +26,25 @@ function Blog() {
   if (error) return <div>Error Loading</div>;
   if (loading) return <Loading />;
 
-  const SinglePost = posts.filter((post) => post._id === id);
+  const SinglePost = posts.filter((post) => post.id === parseInt(id));
 
-  console.log(SinglePost);
   if (SinglePost.length === 0) {
     return <Loading />;
   }
-  const {
-    name,
-    email,
-    title,
-    content,
-    published_at,
-    image: { url },
-  } = SinglePost[0];
-  let newPublishedAt = moment(published_at).format('MMM-Do-YYYY');
+  const { name, email, title, content, published_at, image } = SinglePost[0];
+  let newPublishedAt = moment(published_at).format("MMM-Do-YYYY");
   return (
     <Wrapper>
       <Content>
-        <ImageSingle src={url} alt={name} />
+        <ImageSingle
+          src={sampleImage}
+          alt={name}
+        />
         <Button to="/blogs">Back to Blogs</Button>
         <BlogInfo>
           <Title> {title}</Title>
           <PublishAt>
-            Published: {newPublishedAt} | {email}{' '}
+            Published: {newPublishedAt} | {email}{" "}
           </PublishAt>
         </BlogInfo>
 

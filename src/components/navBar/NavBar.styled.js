@@ -1,5 +1,5 @@
-import styled, { css, keyframes } from 'styled-components';
-import { NavLink as Link } from 'react-router-dom';
+import styled, { css, keyframes } from "styled-components";
+import { NavLink as Link } from "react-router-dom";
 
 export const WrapperContainer = styled.div`
   height: 90px;
@@ -70,7 +70,7 @@ export const Content = styled.section`
 export const LogoName = styled.h3`
   letter-spacing: 1px;
   font-weight: bold;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   background-image: linear-gradient(to right, white, #f4743b);
   text-shadow: none;
   background-clip: text;
@@ -116,21 +116,21 @@ export const List = styled.li`
   background-color: transparent;
   text-decoration: none;
   list-style: none;
-  border-radius: ${({ contact }) => (contact ? '12px' : '')};
+  border-radius: ${({ contact }) => (contact ? "12px" : "")};
   outline: none;
   cursor: pointer;
   color: #f4f4f4f4;
-  border: 3px solid ${({ contact }) => (contact ? '#f4743b' : 'transparent')};
+  border: 3px solid ${({ contact }) => (contact ? "#f4743b" : "transparent")};
   border-bottom: 3px solid
-    ${({ contact }) => (contact ? '#f4743b' : 'transparent')};
+    ${({ contact }) => (contact ? "#f4743b" : "transparent")};
   font-size: 1.1rem;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    color: ${({ contact }) => (contact ? '#f4f4f4' : '')};
+    color: ${({ contact }) => (contact ? "#f4f4f4" : "")};
     border-bottom: 3px solid
-      ${({ contact }) => (contact ? 'transparent' : '#f4743b')};
-    background-color: ${({ contact }) => (contact ? '#f4743b' : '')};
+      ${({ contact }) => (contact ? "transparent" : "#f4743b")};
+    background-color: ${({ contact }) => (contact ? "#f4743b" : "")};
   }
   & a {
     padding: 0;
@@ -154,7 +154,7 @@ export const Logo = styled.div`
   display: flex;
   justify-content: flex-left;
   align-items: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
   max-width: 20%;
@@ -206,7 +206,7 @@ export const Image = styled.img`
 export const moveVertically = keyframes`
        0% {
     background-image: linear-gradient(180deg,
-    ##f4743b,
+    #f4743b,
        #FFFF 
     );
   }
