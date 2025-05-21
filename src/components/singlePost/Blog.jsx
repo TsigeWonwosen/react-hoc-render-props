@@ -31,7 +31,7 @@ function Blog() {
   if (SinglePost.length === 0) {
     return <Loading />;
   }
-  const { name, email, title, content, published_at, image } = SinglePost[0];
+  const { name, email, title, content, published_at } = SinglePost[0];
   let newPublishedAt = moment(published_at).format("MMM-Do-YYYY");
   return (
     <Wrapper>
