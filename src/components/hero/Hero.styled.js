@@ -2,19 +2,16 @@ import styled, { css } from "styled-components";
 import HeroImage from "../../img/background.jpg";
 
 export const MainHeroContainer = styled.div`
-  position: relative;
   height: 100vh;
   width: 100%;
-  z-index: 20;
+  /* z-index: 20; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 `;
 
 export const HeroContainer = styled.section`
-  position: relative;
   height: 99.7vh;
-  z-index: 10;
   margin-top: 0;
   padding-top: 0;
 
@@ -45,9 +42,10 @@ export const Overlay = styled.section`
   top: 0;
   right: 0;
   left: 0;
+  /* z-index: 9; */
   height: 100%;
   width: 100%;
-  background-color: rgba(4, 29, 85, 0.7);
+  background-color: rgba(4, 29, 85, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: center;

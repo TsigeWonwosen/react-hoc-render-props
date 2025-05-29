@@ -22,4 +22,7 @@ export const ContainerPosts = styled.section`
   align-items: center;
   text-align: left;
   background-image: radial-gradient(90deg, #5c0067 0%, #00d4ff 100%);
+  z-index: 10;
+  /* max-width: 1280px;
+  margin: 0 auto; */
 `;

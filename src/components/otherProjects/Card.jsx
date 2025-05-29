@@ -1,5 +1,4 @@
-import React from 'react';
-import { project_Db } from './projectData';
+import { project_Db } from "./projectData";
 import {
   Line,
   CardContainer,
@@ -17,8 +16,9 @@ import {
   AuthorName,
   Name,
   Prefix,
-} from './Card.styled';
-import './card.css';
+} from "./Card.styled";
+import "./card.css";
+
 function Projects() {
   return (
     <CardContainer id="project">
@@ -34,9 +34,15 @@ function Projects() {
 
             <Author>
               <AuthorAvatar href="!#">
-                <Image src={project.img} alt={project.author} />
+                <Image
+                  src={project.img}
+                  alt={project.author}
+                />
               </AuthorAvatar>
-              <svg className="half-circle" viewBox="0 0 106 57">
+              <svg
+                className="half-circle"
+                viewBox="0 0 106 57"
+              >
                 <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
               </svg>
 
@@ -48,7 +54,10 @@ function Projects() {
 
             <Tags>
               {project.tags.map((tag) => (
-                <Link to="#" key={tag}>
+                <Link
+                  to="#"
+                  key={tag}
+                >
                   {tag}
                 </Link>
               ))}

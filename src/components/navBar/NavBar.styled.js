@@ -29,7 +29,7 @@ export const WrapperContainer = styled.div`
 export const Container = styled.section`
   height: 75px;
   width: 100%;
-
+  position: relative;
   background-color: transparent;
   display: flex;
   justify-content: space-around;
@@ -54,17 +54,15 @@ export const Container = styled.section`
   }
 `;
 export const Content = styled.section`
-  max-width: 1200px;
+  max-width: 1280px;
   height: 75px;
   padding: 0;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   @media (max-width: 900px) {
-    flex-direction: column;
-    height: 110px;
   }
 `;
 export const LogoName = styled.h3`
@@ -86,17 +84,17 @@ export const LogoName = styled.h3`
 `;
 
 export const ListContainer = styled.ul`
-  width: 100%;
-  height: 80%;
+  width: auto;
+  height: 100%;
   background-color: transparent;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-left: auto;
-  max-width: 34%;
-  margin-right: 3.4rem;
+  gap: 10px;
+
   @media (max-width: 1000px) {
+    display: none;
     max-width: 50%;
   }
   @media (max-width: 900px) {
@@ -106,14 +104,13 @@ export const ListContainer = styled.ul`
   }
 `;
 export const List = styled.li`
-  height: 75%;
-  width: 100px;
+  height: auto;
+  width: auto;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: transparent;
+  padding: 10px 5px;
   text-decoration: none;
   list-style: none;
   border-radius: ${({ contact }) => (contact ? "12px" : "")};
@@ -131,21 +128,6 @@ export const List = styled.li`
     border-bottom: 3px solid
       ${({ contact }) => (contact ? "transparent" : "#f4743b")};
     background-color: ${({ contact }) => (contact ? "#f4743b" : "")};
-  }
-  & a {
-    padding: 0;
-    margin: 0 0 -3px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    outline: none;
-    height: 101%;
-    border-bottom: 3px solid transparent;
-  }
-  & a.active {
-    border-bottom: 3px solid #f4743b;
   }
 `;
 
@@ -177,27 +159,6 @@ export const Logo = styled.div`
   }
 `;
 
-export const Flag = styled.div`
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  width: auto;
-  max-width: 80px;
-  display: flex;
-  padding-left: 12px;
-  border-left: 1px solid rgba(255, 255, 255, 0.8);
-
-  @media (max-width: 900px) {
-    top: 1rem;
-    right: 1.5rem;
-    border-left: 1px solid transparent;
-  }
-  @media (max-width: 500px) {
-    top: 15px;
-    right: 2rem;
-  }
-`;
-
 export const Image = styled.img`
   width: 30px;
   height: 25px;
@@ -223,4 +184,63 @@ export const moveVertically = keyframes`
 export const LinkStyled = styled(Link)`
   text-decoration: none;
   color: inherit;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & a {
+    padding: 0;
+    margin: 0 0 -3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    outline: none;
+    height: 101%;
+    border-bottom: 3px solid transparent;
+  }
+  & a.active {
+    border-bottom: 3px solid #f4743b;
+  }
+`;
+
+export const MobileMenuContainer = styled.div`
+  display: none;
+  position: relative;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  z-index: 500;
+  @media (max-width: 900px) {
+    display: flex;
+  }
+`;
+
+export const MobileMenu = styled.div`
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  width: 300px;
+  height: 300px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 1;
+
+  color: wheat;
+`;
+
+export const ListWraper = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 400px;
+  border-radius: 4px;
+  background: yellowgreen;
 `;

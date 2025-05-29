@@ -24,8 +24,6 @@ import "./App.css";
 function App() {
   const { posts, loading, error } = useRequest();
 
-  console.log("Post :");
-  console.log(posts);
   let history = useHistory();
   return (
     <div className="App">

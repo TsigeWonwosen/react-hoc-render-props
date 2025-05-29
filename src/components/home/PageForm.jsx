@@ -1,5 +1,5 @@
-import React from 'react';
-import { SinglePaginationItem, Container, Button } from './PageForm.styled';
+import React from "react";
+import { SinglePaginationItem, Container, Button } from "./PageForm.styled";
 
 function PageForm({ posts }) {
   const Pagination = () => {
@@ -7,7 +7,7 @@ function PageForm({ posts }) {
     if (posts.length > 0) {
       singlePag = posts.map((post, index) => (
         <SinglePaginationItem key={index}>
-          <Button to={`/blogs/${post._id}`}> {index + 1}</Button>
+          <Button to={`/blogs/${post.id}`}> {index + 1}</Button>
         </SinglePaginationItem>
       ));
     }

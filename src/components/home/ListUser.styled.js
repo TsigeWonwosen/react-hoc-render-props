@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Card = styled.article`
   position: relative;
@@ -15,7 +15,7 @@ export const Card = styled.article`
   background: linear-gradient(150deg, #39ef74, #4600f1);
   box-shadow: 0.2rem -0.1rem 3rem rgba(0, 0, 0, 0.25);
   transition: 0.3s all ease-in-out;
-  z-index: 20;
+  /* z-index: 20; */
   padding: 0;
   margin: 0;
   overflow: hidden;
@@ -43,7 +43,7 @@ export const Card = styled.article`
   }
 
   &:after {
-    content: '';
+    content: "";
     width: 300px;
     height: 300px;
     position: absolute;
@@ -59,7 +59,7 @@ export const Card = styled.article`
     }
   }
   &:before {
-    content: '';
+    content: "";
     width: 100px;
     height: 100px;
     position: absolute;

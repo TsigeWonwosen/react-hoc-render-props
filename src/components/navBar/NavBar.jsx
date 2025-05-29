@@ -1,28 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { animateScroll as scroll } from 'react-scroll';
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 import {
   WrapperContainer,
   Container,
   Content,
   ListContainer,
   List,
-  Flag,
   Logo,
   LogoName,
-  Image,
   moveVertically,
   LinkStyled,
-} from './NavBar.styled';
+  MobileMenuContainer,
+  MobileMenu,
+  ListWraper,
+} from "./NavBar.styled";
+import { Menu, X } from "lucide-react";
 
 const NavBar = () => {
   const [navBc, setNavBc] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   const { pathname, hash } = useLocation();
- 
+
   useEffect(() => {
     async function handleScrollBar() {
       try {
-        if (pathname === '/' && window.scrollY < 100) {
+        if (pathname === "/" && window.scrollY < 100) {
           setNavBc((prvState) => !prvState);
         } else {
           setNavBc(true);
@@ -32,10 +35,10 @@ const NavBar = () => {
       }
       return;
     }
-    window.addEventListener('scroll', handleScrollBar);
+    window.addEventListener("scroll", handleScrollBar);
 
     return () => {
-      window.removeEventListener('scroll', handleScrollBar);
+      window.removeEventListener("scroll", handleScrollBar);
     };
   }, [navBc, pathname]);
 
@@ -50,22 +53,32 @@ const NavBar = () => {
                   duration: 2000,
                   delay: 100,
                   smooth: true,
-                  behavior: 'smooth',
+                  behavior: "smooth",
                 })
               }
               move={moveVertically}
             >
               Wonde
-              <span style={{ color: 'red' }}>.</span>
+              <span style={{ color: "blue !important" }}>.</span>
               Shi
             </LogoName>
           </Logo>
           <ListContainer>
-            <List>
+            {links.map((link) => (
+              <LinkStyled
+                key={link.label}
+                to={link.path}
+                exact
+                activeClassName={hash === "" ? "active" : ""}
+              >
+                <List>{link.label}</List>
+              </LinkStyled>
+            ))}
+            {/* <List>
               <LinkStyled
                 to="/"
                 exact
-                activeClassName={hash === '' ? 'active' : ''}
+                activeClassName={hash === "" ? "active" : ""}
               >
                 Home
               </LinkStyled>
@@ -74,13 +87,17 @@ const NavBar = () => {
               <LinkStyled
                 to="/#about"
                 exact
-                activeClassName={hash === '#about' ? 'active' : ''}
+                activeClassName={hash === "#about" ? "active" : ""}
               >
                 About
               </LinkStyled>
             </List>
             <List>
-              <LinkStyled to="/blogs" exact activeClassName="active">
+              <LinkStyled
+                to="/blogs"
+                exact
+                activeClassName="active"
+              >
                 Blogs
               </LinkStyled>
             </List>
@@ -88,25 +105,60 @@ const NavBar = () => {
               <LinkStyled
                 to="/#project"
                 exact
-                activeClassName={hash === '#project' ? 'active' : ''}
+                activeClassName={hash === "#project" ? "active" : ""}
               >
                 Projects
               </LinkStyled>
             </List>
             <List contact={true}>
-              <LinkStyled to="/contact" exact activeClassName="active">
+              <LinkStyled
+                to="/contact"
+                exact
+                activeClassName="active"
+              >
                 Contact
               </LinkStyled>
             </List>
             <List>
-              <LinkStyled to="/login" activeClassName="active">
+              <LinkStyled
+                to="/login"
+                activeClassName="active"
+              >
                 Login
               </LinkStyled>
-            </List>
+            </List> */}
           </ListContainer>
-          <Flag>
-            <Image src="//s.svgbox.net/flags-ld.svg?ic=et" alt="flag" />
-          </Flag>
+          <MobileMenuContainer>
+            {!showMenu ? (
+              <Menu
+                size={15}
+                strokeWidth={2}
+                onClick={() => setShowMenu(true)}
+              />
+            ) : (
+              <X
+                size={15}
+                strokeWidth={2}
+                onClick={() => setShowMenu(false)}
+              />
+            )}
+            {showMenu && (
+              <MobileMenu>
+                <ListWraper>
+                  {links.map((link) => (
+                    <LinkStyled
+                      key={link.label}
+                      to={link.path}
+                      exact
+                      activeClassName={hash === "" ? "active" : ""}
+                    >
+                      <List>{link.label}</List>
+                    </LinkStyled>
+                  ))}
+                </ListWraper>
+              </MobileMenu>
+            )}
+          </MobileMenuContainer>
         </Content>
       </Container>
     </WrapperContainer>
@@ -114,3 +166,12 @@ const NavBar = () => {
 };
 
 export default React.memo(NavBar);
+
+const links = [
+  { label: "Home", path: "/" },
+  { label: "Blogs", path: "/blogs" },
+  { label: "Projects", path: "/#project" },
+  { label: "About", path: "/#about" },
+  { label: "Contact", path: "/contact" },
+  { label: "Login", path: "/login" },
+];

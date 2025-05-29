@@ -16,7 +16,6 @@ import {
 } from "./Blog.styled";
 
 import { userContext } from "../../context/userContext";
-
 import { Loading } from "../../components";
 
 function Blog() {
@@ -31,6 +30,7 @@ function Blog() {
   if (SinglePost.length === 0) {
     return <Loading />;
   }
+
   const { name, email, title, content, published_at } = SinglePost[0];
   let newPublishedAt = moment(published_at).format("MMM-Do-YYYY");
   return (

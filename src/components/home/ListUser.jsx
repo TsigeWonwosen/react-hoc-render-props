@@ -14,8 +14,7 @@ import {
   Tags,
   LinkTo,
 } from "./ListUser.styled";
-// { title, body, _id, email, image: { url }, createdAt }
-// const email = "wondeshi@gmail.com";
+
 function ListUser({ title, body, id, email, image, createdAt }) {
   let date = new window.Date(createdAt);
   date = moment(date).format("MMM-Do-YYYY");
